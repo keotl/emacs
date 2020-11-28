@@ -34,8 +34,10 @@
 		eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
-(use-package rainbow-delimiters
-  :hook (prog-mode . rainbow-delimiters-mode))
+;; (use-package rainbow-delimiters
+;;   :hook (prog-mode . rainbow-delimiters-mode))
+(add-to-list 'prog-mode-hook (show-paren-mode))
+(setq show-paren-delay 0)
 
 ;; Keymap help
 (use-package which-key
