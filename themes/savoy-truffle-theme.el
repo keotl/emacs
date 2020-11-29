@@ -257,6 +257,10 @@
         `(web-mode-html-attr-value-face ((,class (:foreground ,keyword))))
         `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))))
         `(web-mode-html-tag-face ((,class (:foreground ,builtin))))
+
+	`(lsp-face-highlight-read ((,class (:background ,bg3 :weight ,'bold :underline t))))
+	`(lsp-face-highlight-textual ((,class (:background ,bg3 :weight ,'bold :underline t))))
+
         `(jde-java-font-lock-package-face ((t (:foreground ,var))))
         `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))
         `(jde-java-font-lock-private-face ((t (:foreground ,keyword))))

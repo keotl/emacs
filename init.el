@@ -17,13 +17,20 @@
   :config (ivy-mode 1))
 (use-package counsel
   :bind (("M-x" . counsel-M-x)
-	 ("C-x b" . counsel-ibuffer)
+	 ;; ("C-x b" . counsel-ibuffer)
+	 ("C-x b" . counsel-switch-buffer)
 	 ("C-x C-f" . counsel-find-file)
 	 ("C-h f" . counsel-describe-function)
 	 ("C-h v" . counsel-describe-variable)
 	 ("C-M-j" . counsel-switch-buffer)
 	 :map minibuffer-local-map
-	 ("C-r" . counsel-minibuffer-history)))
+	 ("C-r" . counsel-minibuffer-history)
+	 :map counsel-find-file-map
+	 ("C-l" . counsel-up-directory)
+	 ("C-c" . ivy-dispatching-done)
+	 ("TAB" . ivy-alt-done)
+	 )
+  )
 
 ;; Editor config
 (column-number-mode)
@@ -34,8 +41,6 @@
 		eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
-;; (use-package rainbow-delimiters
-;;   :hook (prog-mode . rainbow-delimiters-mode))
 (add-to-list 'prog-mode-hook (show-paren-mode))
 (setq show-paren-delay 0)
 
@@ -64,5 +69,5 @@
 
 ;; Other tools
 (load  (concat (file-name-directory load-file-name) "vcs.el"))
-
+(load  (concat (file-name-directory load-file-name) "lang/init.el"))
 
