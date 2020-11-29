@@ -4,6 +4,9 @@
   :bind
   ("C-x C-<return>" . lsp-goto-implementation)
   ("C-x C-S-<return>" . lsp-goto-declaration)
+  ("C-à" . lsp-execute-code-action)
+  ("C-c C-à" . flymake-goto-next-error)
+
   :config
   (lsp-enable-which-key-integration t)
   (keotl/leader-keys
