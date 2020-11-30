@@ -6,6 +6,8 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (global-hl-line-mode 1)
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
 
 (setq visible-bell t)
 
