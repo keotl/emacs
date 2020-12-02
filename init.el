@@ -3,7 +3,7 @@
 (set-face-attribute 'default nil :font "Fira Code" :height 110)
 
 (load  (concat (file-name-directory load-file-name) "themes/savoy-truffle-theme.el"))
-;; (load-theme ')
+;; (load-theme 'savoy-truffle)
 
 ;; Modeline
 (use-package all-the-icons)
@@ -69,5 +69,6 @@
 
 ;; Other tools
 (load  (concat (file-name-directory load-file-name) "vcs.el"))
+(load  (concat (file-name-directory load-file-name) "ui.el"))
 (load  (concat (file-name-directory load-file-name) "lang/init.el"))
 
