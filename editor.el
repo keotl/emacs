@@ -4,3 +4,6 @@
   )
 
 (yas-global-mode)
+
+(use-package smartparens)
+(add-to-list 'prog-mode-hook (smartparens-mode))

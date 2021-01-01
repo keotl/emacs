@@ -16,3 +16,4 @@
 
 
 (load  (concat (file-name-directory load-file-name) "typescript.el"))
+(load  (concat (file-name-directory load-file-name) "python.el"))
