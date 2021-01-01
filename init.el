@@ -64,11 +64,15 @@
   ([remap describe-command] . helpful-command)
   ([remap describe-key] . helpful-key))
 
+;; dired
+(setq dired-listing-switches "-alh --group-directories-first")
+
 ;; Keymap
 (load  (concat (file-name-directory load-file-name) "keymap.el"))
 
 ;; Other tools
 (load  (concat (file-name-directory load-file-name) "vcs.el"))
+(load  (concat (file-name-directory load-file-name) "editor.el"))
 (load  (concat (file-name-directory load-file-name) "ui.el"))
 (load  (concat (file-name-directory load-file-name) "lang/init.el"))
 

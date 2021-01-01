@@ -30,6 +30,8 @@
 (setq use-package-always-ensure t)
 
 ;; Send customize variables to a dummy file
-(setq custom-file "/tmp/unused-custom.el")
+(setq custom-file "~/.cache/emacs/custom.el")
+(load  "~/.cache/emacs/custom.el" 'noerror)
+
 ;; Backup files to new folder
 (setq backup-directory-alist `(("." . "~/.cache/emacs/backupfiles")))

@@ -92,8 +92,8 @@
 
 
 ;; Default split behaviour: vertical line
-(setq split-width-threshold nil)
+;; (setq split-width-threshold nil)
 ;; Default split behaviour: horizontal line
-;; (setq split-width-threshold 1)
+(setq split-width-threshold 1)
 
 
