@@ -14,6 +14,7 @@
 
 ;; Ivy
 (use-package ivy
+  :init (setq ivy-initial-inputs-alist nil)
   :config (ivy-mode 1))
 (use-package counsel
   :bind (("M-x" . counsel-M-x)
@@ -71,6 +72,7 @@
 (load  (concat (file-name-directory load-file-name) "keymap.el"))
 
 ;; Other tools
+(load  (concat (file-name-directory load-file-name) "functions.el"))
 (load  (concat (file-name-directory load-file-name) "vcs.el"))
 (load  (concat (file-name-directory load-file-name) "editor.el"))
 (load  (concat (file-name-directory load-file-name) "ui.el"))
