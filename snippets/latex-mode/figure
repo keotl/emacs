@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: figure
+# --
+\begin{figure}[h]
+  \centering
+    $0
+  \caption{$1}
+  \label{fig:$2}
+\end{figure}

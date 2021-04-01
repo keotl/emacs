@@ -15,8 +15,10 @@
   (lsp-enable-which-key-integration t)
   (keotl/leader-keys
     "mgG" 'xref-find-definitions-other-window)
+  (smartparens-mode)
 )
 
 
 (load  (concat (file-name-directory load-file-name) "typescript.el"))
 (load  (concat (file-name-directory load-file-name) "python.el"))
+(load  (concat (file-name-directory load-file-name) "erlang.el"))
