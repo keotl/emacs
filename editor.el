@@ -7,3 +7,5 @@
 
 (use-package smartparens)
 (add-to-list 'prog-mode-hook (smartparens-mode))
+
+(require 'iso-transl) ;; International dead-keys
