@@ -269,7 +269,7 @@
 	
 	;; `(lsp-face-highlight-read ((,class (:background ,bg3 :weight ,'bold :underline t))))
 
-	`(flymake-note ((,class (:underline (:color ,warning2)))))
+	`(flymake-note ((,class (:underline (:color ,green)))))
 	`(flymake-warning ((,class (:underline (:color ,warning2)))))
 	`(flymake-error ((,class (:underline (:color ,warning)))))
 
