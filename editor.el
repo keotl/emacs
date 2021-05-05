@@ -14,3 +14,7 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
+
+(use-package multiple-cursors
+  :bind ("M-j" . mc/mark-next-like-this)
+  )

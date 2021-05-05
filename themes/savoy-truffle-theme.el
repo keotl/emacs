@@ -236,7 +236,7 @@
 
         `(company-echo-common ((,class (:foreground ,bg1 :background ,fg1))))
         `(company-preview ((,class (:background ,bg3 :foreground ,var))))
-        `(company-preview-common ((,class (:foreground ,bg2 :foreground ,fg3))))
+        `(company-preview-common ((,class (:foreground ,fg2 :background ,fg3 :weight ,'bold))))
         `(company-preview-search ((,class (:foreground ,type :background ,bg3))))
         `(company-scrollbar-bg ((,class (:background ,bg4))))
         `(company-scrollbar-fg ((,class (:foreground ,keyword :background ,bg5))))
