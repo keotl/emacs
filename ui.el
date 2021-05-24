@@ -56,7 +56,9 @@
 
 ;; Treemacs
 (use-package treemacs
-  :after lsp)
+  :after lsp
+  :bind (("M-m p t" . treemacs-select-window))
+  )
 
 
 ;; ace-window

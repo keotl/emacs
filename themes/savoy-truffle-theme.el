@@ -82,7 +82,7 @@
         `(show-paren-match ((,class (:foreground ,localvar :weight ,'bold))))
         `(isearch ((,class (:bold t :foreground ,warning :background ,bg3))))
         `(mode-line ((,class (:box (:line-width 1 :color ,region) :bold t :foreground ,fg4 :background ,bg2))))
-        `(mode-line-inactive ((,class (:box (:line-width 1 :color ,region) :foreground ,region :background ,bg1 :weight normal))))
+        `(mode-line-inactive ((,class (:box (:line-width 1 :color ,region) :foreground ,fg0 :background ,bg1 :weight normal))))
         `(mode-line-buffer-id ((,class (:bold t :foreground ,func :background nil))))
 	`(mode-line-highlight ((,class (:foreground ,keyword :box (:color ,region) :weight bold))))
         `(mode-line-emphasis ((,class (:foreground ,fg1))))
