@@ -76,5 +76,6 @@
 (load  (concat (file-name-directory load-file-name) "vcs.el"))
 (load  (concat (file-name-directory load-file-name) "editor.el"))
 (load  (concat (file-name-directory load-file-name) "ui.el"))
+(load  (concat (file-name-directory load-file-name) "file.el"))
 (load  (concat (file-name-directory load-file-name) "lang/init.el"))
 

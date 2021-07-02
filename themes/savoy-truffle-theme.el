@@ -273,6 +273,11 @@
 	`(flymake-warning ((,class (:underline (:color ,warning2)))))
 	`(flymake-error ((,class (:underline (:color ,warning)))))
 
+	;; TODO indent guide
+	`(highlight-indent-guides-odd-face ((,class (:underline (:color ,warning)))))
+	`(highlight-indent-guides-even-face ((,class (:underline (:color ,warning)))))
+	`(highlight-indent-guides-character-face ((,class (:underline (:color ,warning)))))
+
 
         `(jde-java-font-lock-package-face ((t (:foreground ,var))))
         `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))

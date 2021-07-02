@@ -18,3 +18,14 @@
 (use-package multiple-cursors
   :bind ("M-j" . mc/mark-next-like-this)
   )
+
+
+(use-package highlight-indent-guides
+  :config (lambda () (
+	   (setq highlight-indent-guides-method 'character)
+	   (setq highlight-indent-guides-auto-enabled 'nil)
+	   (set-face-background 'highlight-indent-guides-odd-face ((,class (:foreground ,"#A9B7C6"))))
+	   (set-face-background 'highlight-indent-guides-even-face "dimgray")
+	   (set-face-foreground 'highlight-indent-guides-character-face "white")
+	   ))
+  )
