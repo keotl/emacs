@@ -4,7 +4,7 @@
   :init
   (setq lsp-keymap-prefix "M-m m")
   (setq gc-cons-percentage 10)
-  (setq gc-cons-threshold 800000000)
+  (setq gc-cons-threshold 8000000)
   :bind
   ("C-x C-<return>" . lsp-goto-implementation)
   ("C-x C-S-<return>" . lsp-goto-declaration)

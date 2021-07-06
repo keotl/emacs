@@ -60,3 +60,4 @@
   (if (not (string-match-p "\\.[tj]sx$" filename)
            nil
            t)))
+

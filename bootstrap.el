@@ -9,7 +9,7 @@
 (set-frame-parameter (selected-frame) 'alpha '(90 90))
 (add-to-list 'default-frame-alist '(alpha 90 90))
 
-(setq visible-bell t)
+(setq visible-bell 'nil)
 
 (require 'package)
 

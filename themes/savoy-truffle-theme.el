@@ -274,9 +274,9 @@
 	`(flymake-error ((,class (:underline (:color ,warning)))))
 
 	;; TODO indent guide
-	`(highlight-indent-guides-odd-face ((,class (:underline (:color ,warning)))))
-	`(highlight-indent-guides-even-face ((,class (:underline (:color ,warning)))))
-	`(highlight-indent-guides-character-face ((,class (:underline (:color ,warning)))))
+	;; `(highlight-indent-guides-odd-face ((,class (:foreground ,fg2))))
+	`(highlight-indent-guides-even-face ((,class (:background ,bg2))))
+	`(highlight-indent-guides-character-face ((,class (:foreground ,bg5))))
 
 
         `(jde-java-font-lock-package-face ((t (:foreground ,var))))

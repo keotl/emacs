@@ -13,6 +13,7 @@
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
 (use-package multiple-cursors
@@ -21,11 +22,14 @@
 
 
 (use-package highlight-indent-guides
-  :config (lambda () (
-	   (setq highlight-indent-guides-method 'character)
-	   (setq highlight-indent-guides-auto-enabled 'nil)
-	   (set-face-background 'highlight-indent-guides-odd-face ((,class (:foreground ,"#A9B7C6"))))
-	   (set-face-background 'highlight-indent-guides-even-face "dimgray")
-	   (set-face-foreground 'highlight-indent-guides-character-face "white")
-	   ))
+  :config 
+  (setq highlight-indent-guides-method 'bitmap)
+  (setq highlight-indent-guides-auto-enabled 'nil)
   )
+
+
+(keotl/leader-keys
+  "t" '(:ignore t :which-key "toggles")
+  "tc" 'global-subword-mode
+  )
+(global-subword-mode 'nil)
