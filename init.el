@@ -3,7 +3,7 @@
 (set-face-attribute 'default nil :font "Fira Code" :height 110)
 
 (load  (concat (file-name-directory load-file-name) "themes/savoy-truffle-theme.el"))
-;; (load-theme 'savoy-truffle)
+(load-theme 'savoy-truffle) ;; for emacs 27
 
 ;; Modeline
 (use-package all-the-icons)

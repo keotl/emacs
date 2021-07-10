@@ -1,4 +1,4 @@
-(package-initialize)
+;; (package-initialize) ;; for emacs 26
 
 (setq inhibit-startup-message t)
 
@@ -35,3 +35,4 @@
 
 ;; Backup files to new folder
 (setq backup-directory-alist `(("." . "~/.cache/emacs/backupfiles")))
+

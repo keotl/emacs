@@ -32,4 +32,6 @@
   "t" '(:ignore t :which-key "toggles")
   "tc" 'global-subword-mode
   )
-(global-subword-mode 'nil)
+;; (global-subword-mode 'nil)
+
+
