@@ -99,4 +99,7 @@
 ;; Default split behaviour: horizontal line
 (setq split-width-threshold 1)
 
-
+;; Desktop session restore
+(setq desktop-path '("."))
+(if (file-exists-p ".emacs.desktop")
+    (desktop-save-mode 1))

@@ -56,7 +56,9 @@
        (localvar     "#F49810")
        (orange     "#F49810")
        (warning "#BC3F3C")
-       (warning2 "#F49810"))
+       (warning2 "#F49810")
+       (warning3 "#17DE4C")
+       )
    (custom-theme-set-faces
    'savoy-truffle
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
@@ -273,11 +275,11 @@
 	`(flymake-warning ((,class (:underline (:color ,warning2)))))
 	`(flymake-error ((,class (:underline (:color ,warning)))))
 
-	;; TODO indent guide
-	;; `(highlight-indent-guides-odd-face ((,class (:foreground ,fg2))))
 	`(highlight-indent-guides-even-face ((,class (:background ,bg2))))
 	`(highlight-indent-guides-character-face ((,class (:foreground ,bg5))))
 
+	`(flyspell-incorrect ((,class (:underline (:color ,comment)))))
+	`(flyspell-duplicate ((,class (:underline (:color ,comment)))))
 
         `(jde-java-font-lock-package-face ((t (:foreground ,var))))
         `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))
