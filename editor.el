@@ -18,6 +18,10 @@
   :config 
   (setq highlight-indent-guides-method 'bitmap)
   (setq highlight-indent-guides-auto-enabled 'nil)
+  (setq highlight-indent-guides-highlighter-function (lambda (level responsive display)
+  (if (> 1 level)
+      nil
+    (highlight-indent-guides--highlighter-default level responsive display))))
   )
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 

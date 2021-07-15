@@ -6,7 +6,7 @@
   (setq gc-cons-percentage 10)
   (setq gc-cons-threshold 100000000)
   (setq read-process-output-max (* 1024 1024)) ;; 1mb
-  (setq lsp-idle-delay 0.500)
+  (setq lsp-idle-delay 1)
   :bind
   ("C-x C-<return>" . lsp-goto-implementation)
   ("C-x C-S-<return>" . lsp-goto-declaration)
