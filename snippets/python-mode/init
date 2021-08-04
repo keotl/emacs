@@ -5,6 +5,6 @@
 ${1:$(if (not (string= "" yas-text)) "@Inject\n    " "")}def __init__(self${1:}):${1:$(replace-regexp-in-string ", *[^,]*" '(lambda (x)
 (concat "\nself._" (replace-regexp-in-string ", *" "" x) " = " (replace-regexp-in-string ", *" "" x))
 )
-(replace-regexp-in-string "\\:[ a-zA-Z_0-9]*" "" yas-text)
+(replace-regexp-in-string "\\:[^,]*" "" yas-text)
 )}
     $0
