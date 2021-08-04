@@ -6,7 +6,7 @@
 import unittest
 from unittest import mock
 
-class `(snake-to-camel (file-name-base buffer-file-name))`(unittest.TestCase):
+class `(replace-regexp-in-string "^tests?" "" (snake-to-camel (file-name-base buffer-file-name)))`Tests(unittest.TestCase):
 
     def test_$1(self):
         $0
