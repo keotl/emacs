@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: abs
+# key: abs
+# --
+@abstractmethod
+def $1(self$2)${3:$(if (not (string= "" yas-text)) " -> " "")}$3:
+    raise NotImplementedError
+$0
