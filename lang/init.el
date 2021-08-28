@@ -7,6 +7,7 @@
   (setq gc-cons-threshold 100000000)
   (setq read-process-output-max (* 1024 1024)) ;; 1mb
   (setq lsp-idle-delay 1)
+  (smartparens-mode)
   :bind
   ("C-x C-<return>" . lsp-goto-implementation)
   ("C-x C-S-<return>" . lsp-goto-declaration)
@@ -26,3 +27,4 @@
 (load  (concat (file-name-directory load-file-name) "erlang.el"))
 (load  (concat (file-name-directory load-file-name) "markdown.el"))
 (load  (concat (file-name-directory load-file-name) "yaml.el"))
+(load  (concat (file-name-directory load-file-name) "fsharp.el"))
