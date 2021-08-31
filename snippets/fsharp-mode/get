@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: get
+# key: get
+# --
+[<HttpGet>]
+member _.Get() =
+    $0

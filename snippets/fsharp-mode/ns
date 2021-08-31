@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ns
+# key: ns
+# --
+namespace `(replace-regexp-in-string "\\.$" "" (replace-regexp-in-string "\\/" "."
+(replace-regexp-in-string (regexp-quote (projectile-project-root)) "" (file-name-directory buffer-file-name))))`
+
+$0

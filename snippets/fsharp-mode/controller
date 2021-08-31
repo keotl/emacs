@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: controller
+# key: controller
+# --
+
+open Microsoft.AspNetCore.Mvc
+
+[<ApiController>]
+[<Route("[controller]")>]
+type ${1:`(file-name-base buffer-file-name)`}() =
+    inherit ControllerBase()
+
+    $0
