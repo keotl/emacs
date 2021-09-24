@@ -28,3 +28,4 @@
 (load  (concat (file-name-directory load-file-name) "markdown.el"))
 (load  (concat (file-name-directory load-file-name) "yaml.el"))
 (load  (concat (file-name-directory load-file-name) "fsharp.el"))
+(load  (concat (file-name-directory load-file-name) "c.el"))
