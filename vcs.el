@@ -1,4 +1,5 @@
 (use-package magit)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (keotl/leader-keys
   "g" '(:ignore t :which-key "vcs")
   "gs" 'magit-status
