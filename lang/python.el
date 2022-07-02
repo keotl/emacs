@@ -6,3 +6,4 @@
 			  (smartparens-mode)
 			  ))
   :bind (:map python-mode-map ("C-x C-<return>" . lsp-find-definition))
+  )
