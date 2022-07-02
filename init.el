@@ -1,6 +1,7 @@
 (load  (concat (file-name-directory load-file-name) "bootstrap.el"))
 
 (set-face-attribute 'default nil :font "Fira Code" :height 110)
+;; (set-face-attribute 'default nil :font "Victor Mono" :height 120)
 
 (load  (concat (file-name-directory load-file-name) "themes/savoy-truffle-theme.el"))
 (load-theme 'savoy-truffle) ;; for emacs 27
