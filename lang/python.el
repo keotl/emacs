@@ -5,4 +5,4 @@
                           (lsp-deferred)
 			  (smartparens-mode)
 			  ))
-  :bind ("C-x C-<return>" . lsp-find-definition))
+  :bind (:map python-mode-map ("C-x C-<return>" . lsp-find-definition))
