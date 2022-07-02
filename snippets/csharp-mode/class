@@ -2,10 +2,9 @@
 # name: new C# class
 # key: class
 # --
-namespace `(cs-namespace buffer-file-name)`
+namespace `(cs-namespace buffer-file-name)`;
+
+public class `(file-name-nondirectory (file-name-sans-extension buffer-file-name))`
 {
-    public class `(file-name-nondirectory (file-name-sans-extension buffer-file-name))`
-    {
-        $0
-    }
+    $0
 }

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: controller
+# key: controller
+# --
+using Microsoft.AspNetCore.Mvc;
+
+namespace `(cs-namespace buffer-file-name)`;
+
+[ApiController]
+[Route("${1:[controller]}")]
+public class `(file-name-nondirectory (file-name-sans-extension buffer-file-name))` : ControllerBase
+{
+    $0
+}
