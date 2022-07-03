@@ -9,7 +9,8 @@
   (setq lsp-idle-delay 1)
   (smartparens-mode)
   :bind
-  ("C-x C-<return>" . lsp-goto-implementation)
+  ("C-x C-<return>" . lsp-find-definition)
+  ;; ("C-x C-<return>" . lsp-goto-implementation)
   ("C-x C-S-<return>" . lsp-goto-declaration)
   ("C-à" . lsp-execute-code-action)
   ("C-c C-à" . flymake-goto-next-error)
