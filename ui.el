@@ -56,7 +56,7 @@
 
 ;; Treemacs
 (use-package treemacs
-  :bind (("M-m g t" . treemacs-display-current-project-exclusively)
+  :bind (("M-m g t" . treemacs-select-window)
 	 ("M-m g T" . treemacs)
 	 )
   )
