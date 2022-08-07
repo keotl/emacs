@@ -9,7 +9,11 @@
 (set-frame-parameter (selected-frame) 'alpha '(90 90))
 (add-to-list 'default-frame-alist '(alpha 90 90))
 
+;; (set-keyboard-coding-system 'iso-latin-2)
+;; (setq mac-command-key-is-meta t)
+(setq mac-right-option-modifier nil)
 (setq visible-bell 'nil)
+(setq ring-bell-function 'ignore)
 
 (require 'package)
 

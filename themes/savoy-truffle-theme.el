@@ -69,8 +69,8 @@
 	`(font-lock-constant-face ((,class (:foreground ,const))))
         `(font-lock-doc-face ((,class (:foreground ,comment))))
         `(font-lock-function-name-face ((,class (:foreground ,func :weight ,'bold))))
-        `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono" :height, 120 :weight ,'bold, :italic t)))) ;; Compatible with fira code 110
-	;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :weight ,'bold)))) ;; default with fira code
+        ;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono" :height, 120 :weight ,'bold, :italic t)))) ;; Compatible with fira code 110
+	`(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :weight ,'bold)))) ;; default with fira code
         `(font-lock-string-face ((,class (:foreground ,str))))
         `(font-lock-type-face ((,class (:foreground ,type :weight ,'bold ))))
         `(font-lock-variable-name-face ((,class (:foreground ,var))))
