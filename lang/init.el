@@ -1,6 +1,10 @@
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
-  :hook (lsp-mode . (lambda () (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols)) (lsp-headerline-breadcrumb-mode)))
+  :hook (lsp-mode . (lambda ()
+		      (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+		      (lsp-headerline-breadcrumb-mode)
+		      (treemacs-project-follow-mode)
+		      ))
   :init
   (setq lsp-keymap-prefix "M-m m")
   (setq gc-cons-percentage 10)
@@ -31,3 +35,4 @@
 (load  (concat (file-name-directory load-file-name) "fsharp.el"))
 (load  (concat (file-name-directory load-file-name) "c.el"))
 (load  (concat (file-name-directory load-file-name) "csharp.el"))
+(load  (concat (file-name-directory load-file-name) "haskell.el"))
