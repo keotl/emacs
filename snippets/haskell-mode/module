@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: module
+# key: module
+# --
+module `(hs-namespace buffer-file-name)` where
+
+$0

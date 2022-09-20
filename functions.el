@@ -51,6 +51,11 @@
       (replace-regexp-in-string "^.*\\(src\\|test\\)\\/" ""
            (replace-regexp-in-string "\\/$" ""
                 (file-name-directory buffer-file-name))))
+  )
+(defun hs-namespace (buffer-file-name)
+  (replace-regexp-in-string "\\/" "."
+      (replace-regexp-in-string "^.*\\(src\\|test\\|app\\)\\/" ""
+           (replace-regexp-in-string ".hs$" "" buffer-file-name)))
     )
 
 (defun buffer-text ()
