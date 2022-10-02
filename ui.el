@@ -35,7 +35,7 @@
 (setq flymake-start-on-save-buffer t)
 (setq flymake-proc-compilation-prevents-syntax-check t)
 (setq flymake-wrap-around nil)
-
+(setq warning-minimum-level :error)
 
 ;; Company-mode
 (use-package company
