@@ -2,3 +2,6 @@ auto-save-list/
 elpa/
 transient/
 projectile-bookmarks.eld
+/.cache/
+/.lsp-session-v1
+/.mc-lists.el

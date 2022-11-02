@@ -2,4 +2,4 @@
 # name: todo
 # key: todo
 # --
-// TODO - $0  - keotl `(shell-command-to-string "echo -n $(date +%Y-%m-%d)")`
+// TODO - $0  - keotl `(shell-command-to-string "sh -c 'echo -n $(date +%Y-%m-%d)'")`

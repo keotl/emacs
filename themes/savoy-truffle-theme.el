@@ -69,7 +69,8 @@
 	`(font-lock-constant-face ((,class (:foreground ,const))))
         `(font-lock-doc-face ((,class (:foreground ,comment))))
         `(font-lock-function-name-face ((,class (:foreground ,func :weight ,'bold))))
-        `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono" :height, 120 :weight ,'bold, :italic t)))) ;; Compatible with fira code 110
+        ;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono" :height, 120 :weight ,'bold, :italic t)))) ;; Compatible with fira code 110
+        `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono", :weight ,'bold, :italic t))))
 	;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :weight ,'bold)))) ;; default with fira code
         `(font-lock-string-face ((,class (:foreground ,str))))
         `(font-lock-type-face ((,class (:foreground ,type :weight ,'bold ))))
@@ -97,7 +98,7 @@
 	`(org-code ((,class (:foreground ,fg2))))
 	`(org-hide ((,class (:foreground ,fg4))))
         `(org-level-1 ((,class (:bold t :foreground ,fg2 :height 1.1))))
-        `(org-level-2 ((,class (:bold nil :foreground ,fg3))))
+        `(org-level-2 ((,class (:bold nil :foreground ,cyan))))
         `(org-level-3 ((,class (:bold t :foreground ,fg4))))
         `(org-level-4 ((,class (:bold nil :foreground ,bg4))))
         `(org-date ((,class (:underline t :foreground ,var) )))
