@@ -36,3 +36,6 @@
 (load  (concat (file-name-directory load-file-name) "c.el"))
 (load  (concat (file-name-directory load-file-name) "csharp.el"))
 (load  (concat (file-name-directory load-file-name) "haskell.el"))
+(load  (concat (file-name-directory load-file-name) "jenkinsfile.el"))
+
+
