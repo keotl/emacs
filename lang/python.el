@@ -1,6 +1,8 @@
 (load  (concat (file-name-directory load-file-name) "../util/py-yapf.el"))
 (load  (concat (file-name-directory load-file-name) "../util/python-isort.el"))
 
+(require 'python-mode)
+
 (use-package lsp-pyright
   :ensure t
   :hook (python-mode . (lambda ()
