@@ -36,3 +36,6 @@
 ;; Backup files to new folder
 (setq backup-directory-alist `(("." . "~/.cache/emacs/backupfiles")))
 
+;; If causing issues, disable backupfiles and lockfiles
+;; (setq make-backup-files nil)
+;; (setq create-lockfiles nil)

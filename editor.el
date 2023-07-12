@@ -34,7 +34,8 @@
 (require 'iso-transl) ;; International dead-keys
 
 (setq ispell-program-name "aspell")
-(setq ispell-extra-args '("--camel-case" "--run-together" "--run-together-limit=16" "--sug-mode=ultra"))
+(setq ispell-extra-args '("--camel-case" "--sug-mode=ultra"))
+;; (setq ispell-extra-args '("--camel-case" "--run-together" "--run-together-limit=16" "--sug-mode=ultra"))
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-mode)

@@ -10,7 +10,7 @@
   (setq gc-cons-percentage 10)
   (setq gc-cons-threshold 100000000)
   (setq read-process-output-max (* 1024 1024)) ;; 1mb
-  (setq lsp-idle-delay 1)
+  (setq lsp-idle-delay 0.5)
   (smartparens-mode)
   :bind
   ("C-x C-<return>" . lsp-find-definition)
