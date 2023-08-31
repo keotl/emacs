@@ -191,7 +191,7 @@
         `(magit-branch ((,class (:foreground ,const :weight bold))))
 	`(magit-branch-local ((,class (:foreground ,blue :weight bold))))
 	`(magit-branch-remote ((,class (:foreground ,green :weight bold))))
-        `(magit-log-author ((,class (:foreground ,fg3))))
+        `(magit-log-author ((,class (:foreground ,fg0))))
         `(magit-hash ((,class (:foreground ,fg2))))
         `(magit-diff-file-header ((,class (:foreground ,fg2 :background ,bg3))))
         `(lazy-highlight ((,class (:foreground ,fg2 :background ,bg3))))
