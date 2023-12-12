@@ -62,6 +62,7 @@
    (custom-theme-set-faces
    'savoy-truffle
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
+        `(error ((,class (:foreground ,warning))))
         `(font-lock-builtin-face ((,class (:foreground ,builtin))))
         `(font-lock-comment-face ((,class (:foreground ,comment))))
 	`(font-lock-negation-char-face ((,class (:foreground ,const))))
