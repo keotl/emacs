@@ -38,5 +38,6 @@
 (load  (concat (file-name-directory load-file-name) "haskell.el"))
 (load  (concat (file-name-directory load-file-name) "jenkinsfile.el"))
 (load  (concat (file-name-directory load-file-name) "scala.el"))
+(load  (concat (file-name-directory load-file-name) "clojure.el"))
 
 
