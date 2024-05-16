@@ -3,6 +3,11 @@
     (let ((underscores-removed (replace-regexp-in-string "_" "" cased t t)))
       underscores-removed)))
 
+(defun snake-to-title-case (text)
+  (let ((cased (replace-regexp-in-string "_." 'upcase (downcase text) t t)))
+    (let ((underscores-removed (replace-regexp-in-string "_" " " cased t t)))
+      (upcase-first underscores-removed))))
+
 (defun upcase-first (text)
   (replace-regexp-in-string "^." 'upcase text t t))
 

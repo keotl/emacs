@@ -71,8 +71,8 @@
         `(font-lock-doc-face ((,class (:foreground ,comment))))
         `(font-lock-function-name-face ((,class (:foreground ,func :weight ,'bold))))
         ;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono" :height, 120 :weight ,'bold, :italic t)))) ;; Compatible with fira code 110
-        `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono", :weight ,'bold, :italic t))))
-	;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :weight ,'bold)))) ;; default with fira code
+        ;; `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :family ,"Victor Mono", :weight ,'bold, :italic t))))
+	`(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword :weight ,'bold)))) ;; default with fira code
         `(font-lock-string-face ((,class (:foreground ,str))))
         `(font-lock-type-face ((,class (:foreground ,type :weight ,'bold ))))
         `(font-lock-variable-name-face ((,class (:foreground ,var))))
@@ -289,7 +289,12 @@
         `(jde-java-font-lock-constant-face ((t (:foreground ,const))))
         `(jde-java-font-lock-modifier-face ((t (:foreground ,fg2))))
         `(jde-jave-font-lock-protected-face ((t (:foreground ,keyword))))
-        `(jde-java-font-lock-number-face ((t (:foreground ,var))))))
+        `(jde-java-font-lock-number-face ((t (:foreground ,var))))
+
+        `(highlight-indentation-face ((,class (:foreground ,bg5))) )
+        `(highlight-indentation-current-column-face ((,class (:foreground ,cyan))) )
+
+	))
 
 ;;;###autoload
 (when load-file-name
