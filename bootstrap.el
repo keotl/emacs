@@ -39,3 +39,6 @@
 ;; If causing issues, disable backupfiles and lockfiles
 ;; (setq make-backup-files nil)
 ;; (setq create-lockfiles nil)
+
+;; Performance improvement for lsp-mode
+(setenv "LSP_USE_PLISTS" "true")
