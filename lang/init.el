@@ -41,5 +41,5 @@
 (load  (concat (file-name-directory load-file-name) "scala.el"))
 (load  (concat (file-name-directory load-file-name) "clojure.el"))
 (load  (concat (file-name-directory load-file-name) "json.el"))
-
+(load  (concat (file-name-directory load-file-name) "gleam.el"))
 
