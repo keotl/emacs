@@ -7,6 +7,7 @@
   :mode "\\.gleam$"
   :config (add-to-list 'lsp-language-id-configuration '(gleam-ts-mode . "gleam"))
   :hook (gleam-ts-mode . lsp-deferred)
+  :hook (gleam-ts-mode . smartparens-mode)
   )
 
 ;; Might need to manually patch lsp-mode/lsp-gleam.el to include
