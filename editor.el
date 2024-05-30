@@ -35,13 +35,20 @@
 (keotl/leader-keys
   "t" '(:ignore t :which-key "toggles")
   "tc" 'global-subword-mode
+  "ts" 'flyspell-mode
+  "s" '(:ignore t :which-key "spelling")
+  "sc" 'flyspell-correct-word-before-point
   )
 
 ;; Spelling and localization
 (require 'iso-transl) ;; International dead-keys
 
 (setq ispell-program-name "aspell")
-(setq ispell-extra-args '("--camel-case" "--sug-mode=ultra" "--run-together-limit=3"))
+(setq ispell-extra-args '("--camel-case" "--sug-mode=ultra" "--run-together-limit=2"))
+(eval-after-load "flyspell"
+  '(progn
+     (define-key flyspell-mode-map (kbd "C-.") nil)
+  ))
 ;; (setq ispell-extra-args '("--camel-case" "--run-together" "--run-together-limit=16" "--sug-mode=ultra"))
 
 (add-hook 'text-mode-hook 'flyspell-mode)

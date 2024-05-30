@@ -42,16 +42,13 @@
   :after lsp-mode
   :hook (prog-mode . company-mode)
   :bind
-  (:map company-active-map
-  	;; ("<tab>" . company-complete-selection)
-	("C-n" . company-select-next)
-	("C-p" . company-select-previous)
+  (:map company-mode-map
+	("C-." . company-complete)
 	)
-  ;; (:map lsp-mode-map
-  ;; 	("<tab>" . company-indent-or-complete-common))
   :custom
   (company-minimum-prefix-length 1)
-  (company-idle-delay 0.0)
+  (company-idle-delay 1)
+  ;; (company-dabbrev-downcase 0)
   )
 
 ;; Treemacs
