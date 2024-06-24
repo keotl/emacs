@@ -1,20 +1,11 @@
 ;; Cursor Movement
-;; (defun back-to-indentation-or-beginning () (interactive)
-;;   (if (= (point) (progn (back-to-indentation) (point)))
-;;       (beginning-of-line)))
-;; (global-set-key (kbd "C-a") 'back-to-indentation-or-beginning)
-;; (setq scroll-error-top-bottom t)
-
-;; Text handling
-;; (defun duplicate-line()
-;;   (interactive)
-;;   (move-beginning-of-line 1)
-;;   (kill-line)
-;;   (yank)
-;;   (open-line 1)
-;;   (next-line 1)
-;;   (yank)
-;; )
+(defun beginning-of-line-or-indentation ()
+  (interactive)
+  (if (bolp)
+      (back-to-indentation)
+    (beginning-of-line)))
+(global-set-key (kbd "C-a") 'beginning-of-line-or-indentation)
+(setq scroll-error-top-bottom t)
 
 ;; Leader keys
 (use-package general

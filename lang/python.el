@@ -9,6 +9,8 @@
                           (lsp-deferred)
 			  (smartparens-mode)
 			  (define-key python-mode-map "\C-c\C-f" 'python-reformat)
+			  (highlight-indent-guides-mode nil)
+			  (highlight-indentation-mode t)
 			  ))
   ;; :bind ("C-x C-<return>" . lsp-find-definition)
   )

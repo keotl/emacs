@@ -15,27 +15,27 @@
   )
 
 ;; highlight-indent-guides, has issues with emacs29 on python
-;; (use-package highlight-indent-guides
-;;   :config 
-;;   (setq highlight-indent-guides-method 'bitmap)
-;;   (setq highlight-indent-guides-auto-enabled 'nil)
-;;   (setq highlight-indent-guides-highlighter-function (lambda (level responsive display)
-;;   (if (> 1 level)
-;;       nil
-;;     (highlight-indent-guides--highlighter-default level responsive display))))
-;;   )
-;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(use-package highlight-indent-guides
+  :config 
+  (setq highlight-indent-guides-method 'bitmap)
+  (setq highlight-indent-guides-auto-enabled 'nil)
+  (setq highlight-indent-guides-highlighter-function (lambda (level responsive display)
+  (if (> 1 level)
+      nil
+    (highlight-indent-guides--highlighter-default level responsive display))))
+  )
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; highlight-indentation, alternative package without the graphical glitches
 (load  (concat (file-name-directory load-file-name) "vendor/highlight-indentation.el"))
 (custom-set-variables '(highlight-indentation-overlay-string "|"))
-(add-to-list 'prog-mode-hook 'highlight-indentation-mode)
+;; (add-to-list 'prog-mode-hook 'highlight-indentation-mode)
 
 
 (keotl/leader-keys
   "t" '(:ignore t :which-key "toggles")
   "tc" 'global-subword-mode
-  "ts" 'flyspell-mode
+  "tf" 'flyspell-mode
   "s" '(:ignore t :which-key "spelling")
   "sc" 'flyspell-correct-word-before-point
   )
