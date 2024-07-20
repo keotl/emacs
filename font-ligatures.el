@@ -31,7 +31,7 @@
                           ;; ++ +++ ++++ +>
                           ("+" (rx (or ">" (+ "+"))))
                           ;; :: ::: :::: :> :< := :// ::=
-                          (":" (rx (or ">" "<" "=" "//" ":=" (+ ":"))))
+                          (":" (rx (or ">" "<" "=" ":=" (+ ":"))))
                           ;; // /// //// /\ /* /> /===:===!=//===>>==>==/
                           ("/" (rx (+ (or ">"  "<" "|" "/" "\\" "\*" ":" "!"
                                           "="))))
@@ -62,7 +62,7 @@
                           ;; Fira code: 0xFF 0x12
                           ("0" (rx (and "x" (+ (in "A-F" "a-f" "0-9")))))
                           ;; Fira code:
-                          "Fl"  "Tl"  "fi"  "fj"  "fl"  "ft"
+                          ;; "Fl"  "Tl"  "fi"  "fj"  "fl"  "ft"
                           ;; The few not covered by the regexps.
                           "{|"  "[|"  "]#"  "(*"  "}#"  "$>"  "^="))
   ;; Enables ligature checks globally in all buffers. You can also do it
