@@ -24,7 +24,7 @@
 ;;       nil
 ;;     (highlight-indent-guides--highlighter-default level responsive display))))
 ;;   )
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;;(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; highlight-indentation, alternative package without the graphical glitches
 (load  (concat (file-name-directory load-file-name) "vendor/highlight-indentation.el"))
