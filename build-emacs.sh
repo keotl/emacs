@@ -3,12 +3,9 @@ sudo apt-get install build-essential texinfo libx11-dev libxpm-dev libjpeg-dev l
 git clone --depth=1 --branch emacs-29.3 https://github.com/emacs-mirror/emacs.git
 cd emacs
 ./autogen.sh
-./configure --with-json --with-modules --with-harfbuzz --with-compress-install \
-            --with-threads --with-included-regex --with-zlib --without-sound \
-            --without-xpm --with-jpeg --without-tiff --without-gif --with-png \
-            --with-rsvg --with-imagemagick  --without-toolkit-scroll-bars \
-            --without-gpm --without-dbus --without-makeinfo --without-pop \
-            --without-mailutils --without-gsettings --without-pop --with-native-compilation=aot \
+
+./configure --with-x-toolkit=no \
+            --with-native-compilation=aot \
             --with-pgtk \
 	    CFLAGS="-O3 -pipe -march=native -fomit-frame-pointer" # \
 	    # LDFLAGS="-static"

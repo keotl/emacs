@@ -6,8 +6,13 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (global-hl-line-mode 1)
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+;; emacs 29+ pgtk
+(set-frame-parameter nil 'alpha-background 90)
+(add-to-list 'default-frame-alist '(alpha-background . 90))
+
+;; X11
+;; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+;; (add-to-list 'default-frame-alist '(alpha 90 90))
 
 (setq visible-bell 'nil)
 
