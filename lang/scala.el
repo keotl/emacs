@@ -17,4 +17,6 @@
   (lsp-metals-enable-semantic-highlighting t)
   :hook ((scala-mode . lsp)
 	 (scala-mode . smartparens-mode)
-	 ))
+	 )
+  :bind (:map scala-mode-map ("C-c C-f" . lsp-format-buffer))
+  )
