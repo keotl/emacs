@@ -18,5 +18,8 @@
   :hook ((scala-mode . lsp)
 	 (scala-mode . smartparens-mode)
 	 )
+  )
+
+(use-package scala-mode
   :bind (:map scala-mode-map ("C-c C-f" . lsp-format-buffer))
   )
