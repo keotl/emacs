@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: describe
+# key: describe
+# --
+import org.scalatest.flatspec.AnyFlatSpec
+
+class `(file-name-base buffer-file-name)` extends AnyFlatSpec {
+  $0
+}
