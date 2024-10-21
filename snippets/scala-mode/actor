@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: actor
+# key: actor
+# --
+
+import org.apache.pekko.actor.typed.scaladsl.ActorContext
+import org.apache.pekko.actor.typed.scaladsl.AbstractBehavior
+import org.apache.pekko.actor.typed.Behavior
+import org.apache.pekko.actor.typed.scaladsl.Behaviors
+
+class `(file-name-base buffer-file-name)`(context: ActorContext[`(file-name-base buffer-file-name)`.Message])
+    extends AbstractBehavior[`(file-name-base buffer-file-name)`.Message](context) {
+    import `(file-name-base buffer-file-name)`._
+
+  override def onMessage(msg: Message): Behavior[Message] = {
+    this
+  }
+}
+
+object `(file-name-base buffer-file-name)` {
+  enum Message {
+    case Noop
+    $0
+  }
+
+  def apply(): Behavior[Message] =
+    Behaviors.setup(context => new `(file-name-base buffer-file-name)`(context))
+
+}
