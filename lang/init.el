@@ -11,6 +11,8 @@
   (setq gc-cons-threshold 100000000)
   (setq read-process-output-max (* 1024 1024)) ;; 1mb
   (setq lsp-idle-delay 0.5)
+  (setq lsp-auto-execute-action nil)
+  (setq lsp-apply-edits-after-file-operations nil)
   (smartparens-mode)
   :bind
   ("C-x C-<return>" . lsp-find-definition)

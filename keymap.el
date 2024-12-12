@@ -19,6 +19,8 @@
   (keotl/leader-keys "w/" '(split-window-right :which-key "split vertically"))
   (keotl/leader-keys "w-" '(split-window-below :which-key "split horizontally"))
   (keotl/leader-keys "w+" '(toggle-window-split :which-key "toggle split direction"))
+  (keotl/leader-keys "ws" '(ace-swap-window :which-key "swap windows"))
+  (keotl/leader-keys "wd" '(ace-delete-window :which-key "delete window"))
   )
 
 
