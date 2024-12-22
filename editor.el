@@ -24,7 +24,7 @@
   :after evil
   :ensure t
   :config
-  (evil-collection-init)
+  (evil-collection-init '(calendar dired calc ediff))
   (+layout-bepo-rotate-ts-bare-keymap '(read-expression-map))
   (+layout-bepo-rotate-bare-keymap '(evil-window-map) +layout-bepo-cr-rotation-style)
   (+layout-bepo-rotate-evil-keymap +layout-bepo-cr-rotation-style)
