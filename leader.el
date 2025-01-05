@@ -6,6 +6,7 @@
 (define-key evil-normal-state-map (kbd "SPC p") '("Project 📋" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC p f") 'project-find-file)
 (define-key evil-normal-state-map (kbd "SPC p d") 'project-find-dir)
+(define-key evil-normal-state-map (kbd "SPC p e") 'flymake-show-project-diagnostics)
 
 ;; VCS
 (define-key evil-normal-state-map (kbd "SPC g") '("VCS/Tree 📐" . (keymap)))
