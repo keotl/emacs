@@ -32,7 +32,6 @@
 ;;    (package-install 'use-package))
 
 (require 'use-package)
-(setq use-package-always-ensure t)
 
 ;; Send customize variables to a dummy file
 (setq custom-file "~/.cache/emacs/custom.el")
