@@ -11,18 +11,25 @@
   ;; (setq evil-shift-round nil)
   ;; (setq evil-want-C-u-scroll t)
     (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
-  (setq evil-want-keybinding nil)
+    (setq evil-want-keybinding nil)
+    (setq evil-want-minibuffer t)
   :config ;; tweak evil after loading it
   (evil-mode)
 
-  ;; example how to map a command in normal mode (called 'normal state' in evil)
-  ;; (define-key evil-normal-state-map (kbd ", w") 'evil-window-vsplit)
+  (define-key evil-normal-state-map (kbd "g à") 'flymake-goto-next-error)
+
+  ;;   :bind
+  ;; (:map evil-normal-state-map
+  ;; 	("gà" . flymake-goto-next-error)
+  ;; 	)
   )
+
 
 
 (use-package evil-collection
   :after evil
   :ensure t
+  :custom (evil-collection-setup-minibuffer t)
   :config
   (evil-collection-init '(calendar dired calc ediff ivy xref))
   (+layout-bepo-rotate-ts-bare-keymap '(read-expression-map))
@@ -36,25 +43,11 @@
 
   ;; ivy
   (with-eval-after-load 'ivy
-  (+layout-bepo-rotate-bare-keymap '(ivy-minibuffer-map ivy-switch-buffer-map) +layout-bepo-cr-rotation-style)
-  (+layout-bepo-rotate-keymaps '(ivy-minibuffer-map ivy-switch-buffer-map))
+    (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> t") (kbd "<normal-state> j"))
+    (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> s") (kbd "<normal-state> k"))
+    (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> j") (kbd "<normal-state> t"))
+    (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> k") (kbd "<normal-state> s"))
   )
-  (with-eval-after-load 'ivy
-    (+layout-bepo-rotate-keymaps
-     '(minibuffer-local-map
-       minibuffer-local-ns-map
-       minibuffer-local-completion-map
-       minibuffer-local-must-match-map
-       minibuffer-local-isearch-map
-       read-expression-map))
-    (+layout-bepo-rotate-bare-keymap
-     '(minibuffer-local-map
-       minibuffer-local-ns-map
-       minibuffer-local-completion-map
-       minibuffer-local-must-match-map
-       minibuffer-local-isearch-map
-       read-expression-map)
-     +layout-bepo-cr-rotation-style))
   )
 
 (use-package which-key
@@ -82,4 +75,21 @@
 (key-chord-define evil-visual-state-map ",," 'evil-change-to-previous-state)
 (key-chord-define evil-insert-state-map ",," 'evil-normal-state)
 (key-chord-define evil-replace-state-map ",," 'evil-normal-state)
+
+;; company
+(use-package company
+  :ensure t
+  :after eglot
+  :hook (prog-mode . company-mode)
+  :bind
+  (:map company-mode-map
+	("C-." . company-complete)
+	)
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.2)
+  ;; (company-dabbrev-downcase 0)
+  )
+
+;; flymake
 
