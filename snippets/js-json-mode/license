@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: license
+# key: license
+# --
+{
+  "$entityType": "license",
+  "licenseId": "`(file-name-base buffer-file-name)`",
+  "displayName": "${1:`(upcase-first (snake-to-title-case (file-name-base buffer-file-name)))`}",
+  "enabledFeatures": [
+  $0
+  ]
+}

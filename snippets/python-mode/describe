@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: new python test file
+# key: describe
+# --
+
+import unittest
+from unittest import mock
+
+class `(snake-to-camel (replace-regexp-in-string "^tests?" ""(file-name-base buffer-file-name)))`Tests(unittest.TestCase):
+
+    def test_$1(self):
+        $0

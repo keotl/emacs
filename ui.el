@@ -16,3 +16,9 @@
   ;; 	 ("M-m g T" . treemacs)
   ;; 	 )
   )
+
+(load  (concat (file-name-directory load-file-name) "./vendor/breadcrumb.el"))
+(breadcrumb-mode)
+(setq breadcrumb-project-crumb-separator " / ")
+(setq breadcrumb-project-max-length 100)
+(setq breadcrumb-imenu-max-length 100)

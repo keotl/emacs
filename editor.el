@@ -31,14 +31,27 @@
   :ensure t
   :custom (evil-collection-setup-minibuffer t)
   :config
-  (evil-collection-init '(calendar dired calc ediff ivy xref))
+  (evil-collection-init '(calendar dired ediff ivy xref))
   (+layout-bepo-rotate-ts-bare-keymap '(read-expression-map))
   (+layout-bepo-rotate-bare-keymap '(evil-window-map) +layout-bepo-cr-rotation-style)
   (+layout-bepo-rotate-evil-keymap +layout-bepo-cr-rotation-style)
 
+  (evil-define-key nil evil-inner-text-objects-map
+    "é" 'evil-inner-word
+    "É" 'evil-inner-WORD
+    )
+    (evil-define-key nil evil-outer-text-objects-map
+    "é" 'evil-a-word
+    "É" 'evil-a-WORD
+    )
   ;; dired
   (with-eval-after-load 'dired
-    (+layout-bepo-rotate-keymaps '(dired-mode-map))
+    (evil-collection-translate-key nil '(dired-mode-map)
+				   (kbd "<normal-state> t") (kbd "<normal-state> j")
+				   (kbd "<normal-state> s") (kbd "<normal-state> k")
+				   )
+    (define-key dired-mode-map (kbd "<SPC>") nil)
+    (define-key dired-mode-map (kbd "<normal-state> <SPC>") nil)
     )
 
   ;; ivy
@@ -47,6 +60,13 @@
     (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> s") (kbd "<normal-state> k"))
     (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> j") (kbd "<normal-state> t"))
     (evil-collection-translate-key nil '(ivy-minibuffer-map) (kbd "<normal-state> k") (kbd "<normal-state> s"))
+    ;; (evil-set-initial-state 'ivy-occur-grep-mode 'normal)
+    ;; (evil-set-initial-state 'ivy-minibuffer 'normal)
+
+    ;; Set to evil-normal-state in the minibuffer if we are finding a file only.
+    (add-to-list 'minibuffer-setup-hook (lambda () (if (string-match-p "find-file" (format "%s" this-command)) (evil-normal-state))))
+    ;; (add-to-list 'minibuffer-setup-hook 'evil-normal-state)
+    
   )
   )
 
@@ -62,6 +82,7 @@
 ;; )
 
 (use-package ivy
+  :ensure t
   :init (setq ivy-initial-inputs-alist nil)
   :config (ivy-mode 1))
 
@@ -91,5 +112,24 @@
   ;; (company-dabbrev-downcase 0)
   )
 
-;; flymake
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
 
+;; Interaction
+(use-package yasnippet
+  :ensure t
+  :config
+  (setq yas-snippet-dirs '("~/.emacs30.d/snippets"))
+  (define-key evil-insert-state-map (kbd "M-m i i") 'yas-expand)
+  )
+
+(yas-global-mode)
+
+(use-package markdown-mode
+  :ensure t)
+;; (defun add-yasnippet
+;;     ()
+;;     (setq company-backends '((company-capf :with company-yasnippet))))
+;; (add-hook 'eglot--managed-mode-hook #'add-yasnippet)

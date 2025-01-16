@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: overloadedstrings
+# key: strings
+# --
+{-# LANGUAGE OverloadedStrings #-}

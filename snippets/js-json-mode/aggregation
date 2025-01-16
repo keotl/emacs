@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: aggregation
+# key: aggregation
+# --
+{
+    "$entityType": "aggregation",
+    "aggregationId" : "`(file-name-base buffer-file-name)`",
+    "context": { "type": "organisation" },
+    "outputVariable": "`(file-name-base buffer-file-name)`",
+    "input": {
+      "variableId": "`(replace-regexp-in-string "^organisation_(avg|count)_" "" (file-name-base buffer-file-name))`",
+      "context": { "type": "individual" },
+      "minSufficiency": 10,
+      "maxRecencyDays": 28
+    },
+    "op": {
+      "type": "avg"
+    }
+}

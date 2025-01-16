@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: variable
+# key: variable
+# --
+{
+    "$entityType": "variable",
+    "variableId" : "`(file-name-base buffer-file-name)`",
+    "context": { "type": "individual" },
+    "displayName": "${1:`(upcase-first (snake-to-title-case (file-name-base buffer-file-name)))`}",
+    "dataType": "${2:$$(yas-choose-value '("float" "integer" "string" "boolean"))}",
+    "range": [0, 1],
+    "computation": {
+        "inputs": [$0],
+	"expression": {}
+    }
+}

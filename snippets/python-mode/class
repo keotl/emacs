@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: class (python)
+# key: class
+# --
+class ${1:`(upcase-first (snake-to-camel (file-name-base buffer-file-name)))`}(object):
+    $0

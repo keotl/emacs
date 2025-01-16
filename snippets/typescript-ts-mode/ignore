@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ignore
+# key: ignore
+# --
+// eslint-disable-next-line ${1:$$(yas-choose-value '("no-console"))}

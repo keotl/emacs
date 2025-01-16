@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: controller
+# key: controller
+# --
+import { Controller, Middlewares, Route, Security, Tags } from "tsoa";
+import { accessLevel } from "v2/middleware/authorisationMiddleware";
+
+@Route("${1:users/\{userId\}}")
+@Security("jwt")
+@Tags("users")
+@Middlewares(accessLevel("individual", "admin"))
+export class `(upcase-first (file-name-base buffer-file-name))` extends Controller {
+  $0
+}
