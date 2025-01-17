@@ -9,3 +9,4 @@
   (add-hook 'scala-ts-mode-hook 'eglot-ensure)
   )
 (load  (concat (file-name-directory load-file-name) "../vendor/scala-ts-mode.el"))
+(setq treesit-font-lock-level 4)
