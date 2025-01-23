@@ -2,3 +2,7 @@
 /elpa/
 /eln-cache/
 /auto-save-list/
+/.cache/
+/projects
+/tramp
+/tree-sitter/*.so
