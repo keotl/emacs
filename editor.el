@@ -17,6 +17,8 @@
   (evil-mode)
 
   (define-key evil-normal-state-map (kbd "g à") 'flymake-goto-next-error)
+  (define-key evil-normal-state-map (kbd "g D") 'xref-find-definitions-other-window)
+  (define-key evil-normal-state-map (kbd "TAB") 'indent-for-tab-command)
 
   ;;   :bind
   ;; (:map evil-normal-state-map
@@ -133,3 +135,8 @@
 ;;     ()
 ;;     (setq company-backends '((company-capf :with company-yasnippet))))
 ;; (add-hook 'eglot--managed-mode-hook #'add-yasnippet)
+
+
+(load  (concat (file-name-directory load-file-name) "vendor/highlight-indentation.el"))
+(custom-set-variables '(highlight-indentation-overlay-string "|"))
+(add-to-list 'prog-mode-hook 'highlight-indentation-mode)

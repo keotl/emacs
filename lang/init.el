@@ -10,3 +10,5 @@
 
 (load  (concat (file-name-directory load-file-name) "scala.el"))
 (load  (concat (file-name-directory load-file-name) "typescript.el"))
+(load  (concat (file-name-directory load-file-name) "yaml.el"))
+(load  (concat (file-name-directory load-file-name) "python.el"))

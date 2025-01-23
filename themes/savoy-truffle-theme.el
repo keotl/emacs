@@ -305,6 +305,7 @@
 	;; Eglot
 	`(eglot-diagnostic-tag-unnecessary-face ((,class (:underline (:color ,green)))))
 	`(typescript-ts-jsx-tag-face  ((,class (:foreground ,blue :weight ,'bold))))
+	`(typescript-ts-jsx-attribute-face  ((,class (:foreground ,fg1))))
 	`(font-lock-property-use-face  ((,class (:foreground ,fg1))))
 	
 	;; font-lock generic

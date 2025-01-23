@@ -29,6 +29,9 @@
 (define-key evil-normal-state-map (kbd "SPC m w q") 'eglot-shutdown)
 (define-key evil-normal-state-map (kbd "SPC m f") 'eglot-format)
 (define-key evil-normal-state-map (kbd "SPC m d") 'eldoc)
+(define-key evil-normal-state-map (kbd "SPC m g g") 'xref-find-definitions)
+(define-key evil-normal-state-map (kbd "SPC m g G") 'xref-find-definitions-other-window)
+(define-key evil-normal-state-map (kbd "SPC m g r") 'xref-find-references)
 
 ;; Toggles
 (define-key evil-normal-state-map (kbd "SPC t") '("Toggles 🎛️️" . (keymap)))
