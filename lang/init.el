@@ -7,7 +7,7 @@
   (company-mode 1)
   )
 
-
+(setq-default indent-tabs-mode nil)
 (load  (concat (file-name-directory load-file-name) "scala.el"))
 (load  (concat (file-name-directory load-file-name) "typescript.el"))
 (load  (concat (file-name-directory load-file-name) "yaml.el"))
