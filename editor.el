@@ -123,7 +123,7 @@
 (use-package yasnippet
   :ensure t
   :config
-  (setq yas-snippet-dirs '("~/.emacs30.d/snippets"))
+  (setq yas-snippet-dirs (list (concat (file-name-directory load-file-name) "snippets")))
   (define-key evil-insert-state-map (kbd "M-m i i") 'yas-expand)
   )
 
