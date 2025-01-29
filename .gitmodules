@@ -1,3 +1,0 @@
-[submodule "vendor/gleam-mode"]
-	path = vendor/gleam-mode
-	url = https://github.com/gleam-lang/gleam-mode
