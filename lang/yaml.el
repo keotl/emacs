@@ -1,5 +1,6 @@
 (use-package yaml-mode
+  :ensure t
   :hook (yaml-mode . (lambda ()
-		       (highlight-indent-guides-mode)
+		       (highlight-indentation-mode 1)
 		       (auto-fill-mode -1)
 		       )))

@@ -65,6 +65,8 @@ Known issues:
 (defvar highlight-indentation-overlay-priority 1)
 (defvar highlight-indentation-current-column-overlay-priority 2)
 
+(defvar skip-first-column-guide t)
+
 (defconst highlight-indentation-hooks
   '((after-change-functions (lambda (start end length)
                               (highlight-indentation-redraw-region
@@ -134,7 +136,9 @@ Known issues:
                       (integerp c)
                       (not (= 10 c)) ;; newline
                       (= 32 c)) ;; space
-            (when (= 0 (% cur-column highlight-indentation-offset))
+            (when (and (= 0 (% cur-column highlight-indentation-offset))
+		       (or (not skip-first-column-guide) (not (eq 0 cur-column)))
+		       )
               (let ((p (point)))
                 (setq o (make-overlay p (+ p 1))))
               (overlay-put o overlay t)

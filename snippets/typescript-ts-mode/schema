@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: schema
+# key: schema
+# --
+import { JSONSchemaType } from "ajv/dist/2019";
+
+export type ${1:$(upcase-first yas-text)} = {
+  $2
+}
+
+
+export const $1Schema : JSONSchemaType<${1:$(upcase-first yas-text)}> = {
+  type:"object",
+  properties: {
+    $0,
+  },
+  required: [],
+  additionalProperties: false
+}
+
+export const ${1:$(upcase-first yas-text)}Validator = "${1:$(upcase-first yas-text)}";
+ajv.addSchema(${1:$(yas-text)}Schema, ${1:$(upcase-first yas-text)}Validator)

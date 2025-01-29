@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: post
+# key: post
+# --
+/**
+ * Does something
+ */
+@Post("${1:\{userId\}}")
+public post${2:Users}(@Path() userId: string) {
+  $0
+}

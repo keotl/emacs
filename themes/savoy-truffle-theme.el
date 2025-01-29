@@ -1,6 +1,6 @@
 ;;; savoy-truffle-theme.el --- Theme 
 
-;; Copyright (C) 2020 , Kento A. Lauzon
+;; Copyright (C) 2020 , Kento Lauzon
 
 ;; Author: Kento A. Lauzon
 ;; Version: 0.1
@@ -63,7 +63,7 @@
    'savoy-truffle
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
         `(error ((,class (:foreground ,warning))))
-        `(font-lock-builtin-face ((,class (:foreground ,builtin))))
+        ;;`(font-lock-builtin-face ((,class (:foreground ,builtin))))
         `(font-lock-comment-face ((,class (:foreground ,comment))))
 	`(font-lock-negation-char-face ((,class (:foreground ,const))))
 	`(font-lock-reference-face ((,class (:foreground ,const))))
@@ -266,7 +266,7 @@
 
 	`(lsp-face-highlight-read ((,class (:background ,bg3 :weight ,'bold :underline t))))
 	`(lsp-face-highlight-textual ((,class (:background ,bg3 :weight ,'bold :underline t))))
-	`(header-line ((,class (:background ,bg2 :weight ,'bold))))
+	`(header-line ((,class (:background ,bg2 :weight ,'bold :underline (:color ,region :style line :position t)))))
 	`(lsp-headerline-breadcrumb-project-prefix-face ((,class (:foreground ,fg0 :weight ,'normal))))
 	`(lsp-headerline-breadcrumb-prefix-face ((,class (:foreground ,fg0 :weight ,'normal))))
 	`(lsp-headerline-breadcrumb-symbols-face ((,class (:foreground ,fg0 :weight ,'normal))))
@@ -294,6 +294,24 @@
         `(highlight-indentation-face ((,class (:foreground ,bg5))) )
         `(highlight-indentation-current-column-face ((,class (:foreground ,cyan))) )
 
+	;; Breadcrums
+        `(breadcrumb-project-base-face ((,class (:foreground ,fg1 :weight ,'bold))))
+        `(breadcrumb-project-crumbs-face ((,class (:foreground ,fg1 :weight ,'normal))))
+        `(breadcrumb-project-leaf-face ((,class (:foreground ,green))))
+	;; breadcrumbs imenu, i.e. symbols
+        `(breadcrumb-imenu-crumbs-face ((,class (:foreground ,fg1 :weight ,'normal))))
+        `(breadcrumb-imenu-leaf-face ((,class (:foreground ,cyan))))
+
+	;; Eglot
+	`(eglot-diagnostic-tag-unnecessary-face ((,class (:underline (:color ,green)))))
+	`(typescript-ts-jsx-tag-face  ((,class (:foreground ,blue :weight ,'bold))))
+	`(typescript-ts-jsx-attribute-face  ((,class (:foreground ,fg1))))
+	`(font-lock-property-use-face  ((,class (:foreground ,fg1))))
+	
+	;; font-lock generic
+	`(font-lock-function-call-face  ((,class (:foreground ,fg1))))
+	`(font-lock-builtin-face  ((,class (:foreground ,fg1))))
+	`(font-lock-variable-use-face  ((,class (:foreground ,fg1))))
 	))
 
 ;;;###autoload

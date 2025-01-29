@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: get
+# key: get
+# --
+/**
+ * Does something
+ */
+@Get("${1:\{userId\}}")
+public get${2:Users}(@Path() userId: string) {
+  $0
+}

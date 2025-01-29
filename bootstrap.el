@@ -28,11 +28,10 @@
  (package-refresh-contents))
 
 ;; Initialize use-package
-(unless (package-installed-p 'use-package)
-   (package-install 'use-package))
+;; (unless (package-installed-p 'use-package)
+;;    (package-install 'use-package))
 
 (require 'use-package)
-(setq use-package-always-ensure t)
 
 ;; Send customize variables to a dummy file
 (setq custom-file "~/.cache/emacs/custom.el")
@@ -43,7 +42,6 @@
 
 ;; If causing issues, disable backupfiles and lockfiles
 ;; (setq make-backup-files nil)
-;; (setq create-lockfiles nil)
+(setq create-lockfiles nil)
 
-;; Performance improvement for lsp-mode
-(setenv "LSP_USE_PLISTS" "true")
+(setq delete-by-moving-to-trash t)

@@ -1,9 +1,9 @@
-auto-save-list/
-elpa/
-transient/
-projectile-bookmarks.eld
-/.cache/
-/.lsp-session-v1
-/.mc-lists.el
+/transient/
+/elpa/
 /eln-cache/
-/tree-sitter/
+/auto-save-list/
+/.cache/
+/projects
+/tramp
+/tree-sitter/*.so
+

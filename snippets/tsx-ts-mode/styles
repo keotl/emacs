@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: styles
+# key: styles
+# --
+const styles = StyleSheet.create({
+  $0
+});

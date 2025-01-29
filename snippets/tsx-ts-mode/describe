@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: describe
+# key: describe
+# --
+import { cleanup, render } from "@testing-library/react";
+import * as React from 'react';
+
+describe("`(replace-regexp-in-string ".test$" "" (file-name-base buffer-file-name))`", () => {
+  it("$1", () => {
+    $0
+  });
+
+  afterEach(cleanup)
+});
