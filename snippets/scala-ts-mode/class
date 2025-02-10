@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: class 
+# key: class
+# --
+
+case class ${1:`(file-name-base buffer-file-name)`}($2) {
+  $0
+}

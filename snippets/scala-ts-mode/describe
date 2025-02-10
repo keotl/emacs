@@ -2,8 +2,8 @@
 # name: describe
 # key: describe
 # --
-import org.scalatest.flatspec.AnyFlatSpec
+import munit.FunSuite
 
-class `(file-name-base buffer-file-name)` extends AnyFlatSpec {
+class `(file-name-base buffer-file-name)` extends FunSuite {
   $0
 }
