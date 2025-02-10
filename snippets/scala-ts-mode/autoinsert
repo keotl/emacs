@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: autoinsert
+# key: autoinsert
+# --
+package replaceme!

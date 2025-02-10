@@ -63,6 +63,12 @@
            (replace-regexp-in-string ".hs$" "" buffer-file-name)))
     )
 
+(defun java-namespace (buffer-file-name)
+  (replace-regexp-in-string "\\/" "."
+      (replace-regexp-in-string "^.*\\(src\\|test\\)\\/\\w+/\\(java\\|scala\\)/" ""
+           (replace-regexp-in-string "\\/$" ""
+                (file-name-directory buffer-file-name))))
+  )
 (defun buffer-text ()
   (buffer-substring-no-properties 1 (buffer-size)))
 
