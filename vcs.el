@@ -26,6 +26,7 @@
   ;; (+layout-bepo-rotate-ts-bare-keymap
   ;;  '(magit-mode-map))
   :bind
+  (:map magit-mode-map ("<SPC>" . nil))
   ;; (:map magit-mode-map ("s" . nil))
   ;; (:map magit-mode-map ("t" . nil))
   )

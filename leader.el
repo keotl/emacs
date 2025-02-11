@@ -1,10 +1,12 @@
 ;; Files
 (define-key evil-normal-state-map (kbd "SPC f") '("Files 🔍" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC f f") 'find-file)
+(define-key magit-mode-map (kbd "SPC f f") 'find-file)
 
 ;; Project
 (define-key evil-normal-state-map (kbd "SPC p") '("Project 📋" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC p f") 'project-find-file)
+(define-key magit-mode-map (kbd "SPC p f") 'project-find-file)
 (define-key evil-normal-state-map (kbd "SPC p d") 'project-find-dir)
 (define-key evil-normal-state-map (kbd "SPC p e") 'flymake-show-project-diagnostics)
 (define-key evil-normal-state-map (kbd "SPC p t") 'find-test-file)
