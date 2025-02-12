@@ -4,13 +4,23 @@
 (define-key magit-mode-map (kbd "SPC f f") 'find-file)
 
 ;; Project
-(define-key evil-normal-state-map (kbd "SPC p") '("Project 📋" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC p f") 'project-find-file)
-(define-key magit-mode-map (kbd "SPC p f") 'project-find-file)
 (define-key evil-normal-state-map (kbd "SPC p d") 'project-find-dir)
+(define-key evil-normal-state-map (kbd "SPC p D") 'project-dired)
 (define-key evil-normal-state-map (kbd "SPC p e") 'flymake-show-project-diagnostics)
 (define-key evil-normal-state-map (kbd "SPC p t") 'find-test-file)
 (define-key evil-normal-state-map (kbd "SPC p T") 'find-test-file-other-window)
+(define-key evil-normal-state-map (kbd "SPC p x") 'project-execute-extended-command)
+(define-key evil-normal-state-map (kbd "SPC p !") 'project-shell-command)
+(define-key evil-normal-state-map (kbd "SPC p s") '("Search/Replace 🔍" . (keymap)))
+(define-key evil-normal-state-map (kbd "SPC p s g") 'project-find-grep)
+(define-key evil-normal-state-map (kbd "SPC p s r") 'project-query-replace-regexp)
+(define-key evil-normal-state-map (kbd "SPC p b") '("Project buffers 🪟" . (keymap)))
+(define-key evil-normal-state-map (kbd "SPC p b b") 'project-switch-to-buffer)
+(define-key evil-normal-state-map (kbd "SPC p b k") 'project-kill-buffers)
+(define-key evil-normal-state-map (kbd "SPC p b C-b") 'project-list-buffers)
+;; copy all keys in evil's "SPC p" prefix to magit's "SPC p"
+(define-key magit-mode-map (kbd "SPC p") (lookup-key evil-normal-state-map (kbd "SPC p")))
 
 ;; VCS
 (define-key evil-normal-state-map (kbd "SPC g") '("VCS/Tree 📐" . (keymap)))
@@ -54,6 +64,7 @@
 ;; Interaction
 (define-key evil-normal-state-map (kbd "SPC i") '("Interaction 🕹️" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC i i") 'yas-insert-snippet)
+(define-key evil-normal-state-map (kbd "SPC i u") 'counsel-unicode-char)
 
 ;; Buffers
 (define-key evil-normal-state-map (kbd "SPC b") '("Buffers 🪟" . (keymap)))
