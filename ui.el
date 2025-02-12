@@ -4,7 +4,8 @@
 
 
 ;; Modeline
-(use-package all-the-icons)
+(use-package all-the-icons
+  :ensure t)
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1))
@@ -12,6 +13,7 @@
 
 ;; Treemacs
 (use-package treemacs
+  :ensure t
   ;; :bind (("M-m g t" . treemacs-select-window)
   ;; 	 ("M-m g T" . treemacs)
   ;; 	 )

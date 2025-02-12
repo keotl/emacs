@@ -13,7 +13,7 @@
 (define-key evil-normal-state-map (kbd "SPC p x") 'project-execute-extended-command)
 (define-key evil-normal-state-map (kbd "SPC p !") 'project-shell-command)
 (define-key evil-normal-state-map (kbd "SPC p s") '("Search/Replace 🔍" . (keymap)))
-(define-key evil-normal-state-map (kbd "SPC p s g") 'project-find-grep)
+(define-key evil-normal-state-map (kbd "SPC p s g") 'project-find-regexp)
 (define-key evil-normal-state-map (kbd "SPC p s r") 'project-query-replace-regexp)
 (define-key evil-normal-state-map (kbd "SPC p b") '("Project buffers 🪟" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC p b b") 'project-switch-to-buffer)
