@@ -66,8 +66,8 @@
     ;; (evil-set-initial-state 'ivy-minibuffer 'normal)
 
     ;; Set to evil-normal-state in the minibuffer if we are finding a file only.
-    (add-to-list 'minibuffer-setup-hook (lambda () (if (string-match-p "find-file" (format "%s" this-command)) (evil-normal-state))))
-    ;; (add-to-list 'minibuffer-setup-hook 'evil-normal-state)
+    ;; (add-to-list 'minibuffer-setup-hook (lambda () (if (string-match-p "find-file" (format "%s" this-command)) (evil-normal-state))))
+    (add-to-list 'minibuffer-setup-hook 'evil-normal-state)
     
   )
   )
@@ -140,3 +140,6 @@
 (load  (concat (file-name-directory load-file-name) "vendor/highlight-indentation.el"))
 (custom-set-variables '(highlight-indentation-overlay-string "|"))
 (add-to-list 'prog-mode-hook 'highlight-indentation-mode)
+
+;; move M-c to M-n to prevent swaywm keybinding conflict
+(define-key global-map (kbd "M-n") 'capitalize-word)

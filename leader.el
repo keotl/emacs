@@ -64,7 +64,7 @@
 ;; Interaction
 (define-key evil-normal-state-map (kbd "SPC i") '("Interaction 🕹️" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC i i") 'yas-insert-snippet)
-(define-key evil-normal-state-map (kbd "SPC i u") 'counsel-unicode-char)
+(define-key evil-normal-state-map (kbd "SPC i u") 'insert-char)
 
 ;; Buffers
 (define-key evil-normal-state-map (kbd "SPC b") '("Buffers 🪟" . (keymap)))
