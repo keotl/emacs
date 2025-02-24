@@ -17,6 +17,7 @@
   (evil-mode)
 
   (define-key evil-normal-state-map (kbd "g à") 'flymake-goto-next-error)
+  (define-key evil-normal-state-map (kbd "g À") 'flymake-goto-prev-error)
   (define-key evil-normal-state-map (kbd "g D") 'xref-find-definitions-other-window)
   (define-key evil-normal-state-map (kbd "TAB") 'indent-for-tab-command)
 
@@ -107,6 +108,9 @@
   :bind
   (:map company-mode-map
 	("C-." . company-complete)
+	)
+  (:map company-active-map
+	("M-n" . nil)
 	)
   :custom
   (company-minimum-prefix-length 1)
