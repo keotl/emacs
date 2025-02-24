@@ -7,6 +7,14 @@
 			edited3
 			)
 		      ))
+
+    (".*\\.scala?$" . (lambda (file-name)
+		        (let* ((edited1 (replace-regexp-in-string "\\/src\\/main\\/" "/src/test/" file-name))
+			       (edited2 (replace-regexp-in-string "\\.scala$" "Spec.scala" edited1))
+			       )
+			  edited2
+			  )
+		        ))
     )
   "alist of impl to test file name transforms. "
   ;; To override in dir-locals.el:
