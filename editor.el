@@ -20,6 +20,7 @@
   (define-key evil-normal-state-map (kbd "g À") 'flymake-goto-prev-error)
   (define-key evil-normal-state-map (kbd "g D") 'xref-find-definitions-other-window)
   (define-key evil-normal-state-map (kbd "TAB") 'indent-for-tab-command)
+  (define-key evil-normal-state-map (kbd "z z") 'recenter-top-bottom)
 
   ;;   :bind
   ;; (:map evil-normal-state-map
