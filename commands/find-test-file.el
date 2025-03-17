@@ -15,6 +15,13 @@
 			  edited2
 			  )
 		        ))
+    (".*\\.py$" . (lambda (file-name)
+		        (let* ((edited1 (replace-regexp-in-string "\\/src\\/" "/test/" file-name))
+			       (edited2 (replace-regexp-in-string "\\([^/]+\\)\\.py$" (lambda (x) (concat "test_" x)) edited1))
+			       )
+			  edited2
+			  )
+		        ))
     )
   "alist of impl to test file name transforms. "
   ;; To override in dir-locals.el:
