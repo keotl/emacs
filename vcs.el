@@ -38,3 +38,4 @@
   ;; (:map magit-mode-map ("s" . nil))
   ;; (:map magit-mode-map ("t" . nil))
   )
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
