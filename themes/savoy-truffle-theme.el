@@ -307,6 +307,7 @@
 	`(typescript-ts-jsx-tag-face  ((,class (:foreground ,blue :weight ,'bold))))
 	`(typescript-ts-jsx-attribute-face  ((,class (:foreground ,fg1))))
 	`(font-lock-property-use-face  ((,class (:foreground ,fg1))))
+	`(font-lock-operator-face ((,class (:foreground ,orange))))
 	
 	;; font-lock generic
 	`(font-lock-function-call-face  ((,class (:foreground ,fg1))))
