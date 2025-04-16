@@ -49,6 +49,7 @@
 (define-key evil-normal-state-map (kbd "SPC t") '("Toggles 🎛️️" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC t c") 'global-subword-mode)
 (define-key evil-normal-state-map (kbd "SPC t f") 'flyspell-mode)
+(define-key evil-normal-state-map (kbd "SPC t w") 'toggle-trailing-whitespace)
 (define-key evil-normal-state-map (kbd "SPC t s") '("Text Size 🅰" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC t s t") 'text-scale-decrease)
 (define-key evil-normal-state-map (kbd "SPC t s s") 'text-scale-increase)
