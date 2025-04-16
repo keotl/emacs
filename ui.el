@@ -1,7 +1,7 @@
 
 (global-display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
-
+(setq-default show-trailing-whitespace t)
 
 ;; Modeline
 (use-package all-the-icons
