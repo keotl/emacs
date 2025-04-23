@@ -1,4 +1,5 @@
 (use-package magit
+  :ensure t
   :config
   ;; (add-hook 'magit-status-mode-hook 'evil-normal-state)
   ;; (+layout-bepo-rotate-ts-bare-keymap '(magit-section-mode-map))
