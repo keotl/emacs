@@ -119,6 +119,8 @@
   ;; (company-dabbrev-downcase 0)
   )
 
+(setq flymake-show-diagnostics-at-end-of-line t)
+
 (use-package evil-surround
   :ensure t
   :config
@@ -148,3 +150,4 @@
 
 ;; move M-c to M-n to prevent swaywm keybinding conflict
 (define-key global-map (kbd "M-n") 'capitalize-word)
+
