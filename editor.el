@@ -119,7 +119,7 @@
   ;; (company-dabbrev-downcase 0)
   )
 
-(setq flymake-show-diagnostics-at-end-of-line t)
+;; (setq flymake-show-diagnostics-at-end-of-line t)
 
 (use-package evil-surround
   :ensure t
