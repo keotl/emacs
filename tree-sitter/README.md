@@ -23,3 +23,12 @@ https://github.com/tree-sitter/tree-sitter-scala
 (default branch)
 src
 ```
+
+# CSharp
+```
+M-x treesit-install-language-grammar
+c-sharp
+https://github.com/tree-sitter/tree-sitter-c-sharp
+(default branch)
+src
+```

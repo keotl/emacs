@@ -26,4 +26,5 @@
 (load  (concat (file-name-directory load-file-name) "yaml.el"))
 (load  (concat (file-name-directory load-file-name) "python.el"))
 (load  (concat (file-name-directory load-file-name) "terraform.el"))
+(load  (concat (file-name-directory load-file-name) "csharp.el"))
 ;; (load  (concat (file-name-directory load-file-name) "haskell.el"))
