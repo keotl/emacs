@@ -143,6 +143,10 @@
 ;;     (setq company-backends '((company-capf :with company-yasnippet))))
 ;; (add-hook 'eglot--managed-mode-hook #'add-yasnippet)
 
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
 
 (load  (concat (file-name-directory load-file-name) "vendor/highlight-indentation.el"))
 (custom-set-variables '(highlight-indentation-overlay-string "|"))
