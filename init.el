@@ -32,3 +32,4 @@
 (load  (concat (file-name-directory load-file-name) "themes/savoy-truffle-theme.el"))
 (load-theme 'savoy-truffle)
 ;; (load  (concat (file-name-directory load-file-name) "vendor/vimgolf.el"))
+(load  (concat (file-name-directory load-file-name) "apps.el"))
