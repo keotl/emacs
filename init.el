@@ -1,6 +1,19 @@
 (load  (concat (file-name-directory load-file-name) "bootstrap.el"))
 (set-face-attribute 'default nil :font "Fira Code" :height 110)
 
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :font "Fira Code" :height 150)
+  (setq mac-command-modifier 'meta)
+  ;; (setq mac-option-modifier 'meta)
+  (setq mac-right-option-modifier nil)
+  (setq ns-auto-hide-menu-bar t)
+  (setq ring-bell-function 'ignore)
+  (use-package exec-path-from-shell
+    :ensure t)
+  (when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+  )
+
 ;; desktop save mode
 (setq desktop-path '("."))
 (if (file-exists-p ".emacs.desktop")
