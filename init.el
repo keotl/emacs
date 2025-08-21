@@ -12,6 +12,8 @@
     :ensure t)
   (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+  (set-frame-parameter (selected-frame) 'alpha '(90 90))
+  (add-to-list 'default-frame-alist '(alpha 90 90))
   )
 
 ;; desktop save mode
