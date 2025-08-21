@@ -14,6 +14,7 @@
   (exec-path-from-shell-initialize))
   (set-frame-parameter (selected-frame) 'alpha '(90 90))
   (add-to-list 'default-frame-alist '(alpha 90 90))
+  (setq insert-directory-program "gls" dired-use-ls-dired t)
   )
 
 ;; desktop save mode
