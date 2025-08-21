@@ -81,3 +81,7 @@
 (define-key evil-normal-state-map (kbd "SPC h m") 'describe-mode)
 (define-key evil-normal-state-map (kbd "SPC h k") 'describe-key)
 (define-key evil-normal-state-map (kbd "SPC h K") 'describe-keymap)
+
+;; Apps
+(define-key evil-normal-state-map (kbd "SPC a") '("Apps 📱" . (keymap)))
+(define-key evil-normal-state-map (kbd "SPC a t") 'vterm)
