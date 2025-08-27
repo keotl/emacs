@@ -1,8 +1,8 @@
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
-               '(typescript-ts-mode . ("~/.emacs.d/.cache/lsp/npm/typescript-language-server/bin/typescript-language-server" "--stdio")))
+               '(typescript-ts-mode . ("~/.emacs.d/.cache/lsp/npm/node_modules/.bin/typescript-language-server" "--stdio")))
 (add-to-list 'eglot-server-programs
-               '(tsx-ts-mode . ("~/.emacs.d/.cache/lsp/npm/typescript-language-server/bin/typescript-language-server" "--stdio")))
+               '(tsx-ts-mode . ("~/.emacs.d/.cache/lsp/npm/node_modules/.bin/typescript-language-server" "--stdio")))
   )
 
 (with-eval-after-load 'typescript-ts-mode
