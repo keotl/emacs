@@ -85,3 +85,7 @@
 ;; Apps
 (define-key evil-normal-state-map (kbd "SPC a") '("Apps 📱" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC a t") 'vterm)
+
+;; Quit
+(define-key evil-normal-state-map (kbd "SPC q") '("Quit 🚪" . (keymap)))
+(define-key evil-normal-state-map (kbd "SPC q q") 'save-buffers-kill-terminal)
