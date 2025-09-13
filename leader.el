@@ -19,8 +19,6 @@
 (define-key evil-normal-state-map (kbd "SPC p b b") 'project-switch-to-buffer)
 (define-key evil-normal-state-map (kbd "SPC p b k") 'project-kill-buffers)
 (define-key evil-normal-state-map (kbd "SPC p b C-b") 'project-list-buffers)
-;; copy all keys in evil's "SPC p" prefix to magit's "SPC p"
-(define-key magit-mode-map (kbd "SPC p") (lookup-key evil-normal-state-map (kbd "SPC p")))
 
 ;; VCS
 (define-key evil-normal-state-map (kbd "SPC g") '("VCS/Tree 📐" . (keymap)))
@@ -89,3 +87,6 @@
 ;; Quit
 (define-key evil-normal-state-map (kbd "SPC q") '("Quit 🚪" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC q q") 'save-buffers-kill-terminal)
+
+;; copy all keys in evil's "SPC" prefix to magit's "SPC"
+(define-key magit-mode-map (kbd "SPC") (lookup-key evil-normal-state-map (kbd "SPC")))
