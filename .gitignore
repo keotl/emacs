@@ -6,3 +6,4 @@
 /projects
 /tramp
 /tree-sitter/*.so
+/tree-sitter/*.dylib

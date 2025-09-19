@@ -6,12 +6,13 @@
   (setq mac-command-modifier 'meta)
   ;; (setq mac-option-modifier 'meta)
   (setq mac-right-option-modifier nil)
-  (setq ns-auto-hide-menu-bar t)
+  ;; (setq ns-auto-hide-menu-bar t)
   (setq ring-bell-function 'ignore)
   (use-package exec-path-from-shell
     :ensure t)
-  (when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+  (when (and (memq window-system '(mac ns x)) (not getenv "EMACS_RUN_FROM_TERMINAL"))
+    (exec-path-from-shell-initialize))
+
   (set-frame-parameter (selected-frame) 'alpha '(90 90))
   (add-to-list 'default-frame-alist '(alpha 90 90))
   (setq insert-directory-program "gls" dired-use-ls-dired t)
