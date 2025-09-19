@@ -10,7 +10,7 @@
   (setq ring-bell-function 'ignore)
   (use-package exec-path-from-shell
     :ensure t)
-  (when (and (memq window-system '(mac ns x)) (not getenv "EMACS_RUN_FROM_TERMINAL"))
+  (when (and (memq window-system '(mac ns x)) (not (getenv "EMACS_RUN_FROM_TERMINAL")))
     (exec-path-from-shell-initialize))
 
   (set-frame-parameter (selected-frame) 'alpha '(90 90))
