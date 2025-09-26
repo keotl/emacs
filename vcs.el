@@ -26,7 +26,9 @@
   ;;  '(magit-blob-mode-map))
   ;; (+layout-bepo-rotate-ts-bare-keymap
   ;;  '(magit-mode-map))
+  (setq magit-diff-visit-prefer-worktree t)
   :bind
+  ;; magit-mode
   (:map magit-mode-map ("<SPC>" . nil))
   (:map magit-mode-map ("w" . nil))
   (:map magit-mode-map ("w w" . 'evil-window-next))
@@ -36,6 +38,33 @@
   (:map magit-mode-map ("w t" . 'evil-window-down))
   (:map magit-mode-map ("w o" . 'delete-other-windows))
   (:map magit-mode-map ("w l" . 'evil-window-delete))
+  (:map magit-mode-map ("w k" . 'evil-window-split))
+  (:map magit-mode-map ("w v" . 'evil-window-vsplit))
+  ;; magit-log-mode
+  (:map magit-log-mode-map ("<SPC>" . nil))
+  (:map magit-log-mode-map ("w" . nil))
+  (:map magit-log-mode-map ("w w" . 'evil-window-next))
+  (:map magit-log-mode-map ("w c" . 'evil-window-left))
+  (:map magit-log-mode-map ("w r" . 'evil-window-right))
+  (:map magit-log-mode-map ("w s" . 'evil-window-up))
+  (:map magit-log-mode-map ("w t" . 'evil-window-down))
+  (:map magit-log-mode-map ("w o" . 'delete-other-windows))
+  (:map magit-log-mode-map ("w l" . 'evil-window-delete))
+  (:map magit-log-mode-map ("w k" . 'evil-window-split))
+  (:map magit-log-mode-map ("w v" . 'evil-window-vsplit))
+  ;; magit-process-mode
+  (:map magit-process-mode-map ("<SPC>" . nil))
+  (:map magit-process-mode-map ("w" . nil))
+  (:map magit-process-mode-map ("w w" . 'evil-window-next))
+  (:map magit-process-mode-map ("w c" . 'evil-window-left))
+  (:map magit-process-mode-map ("w r" . 'evil-window-right))
+  (:map magit-process-mode-map ("w s" . 'evil-window-up))
+  (:map magit-process-mode-map ("w t" . 'evil-window-down))
+  (:map magit-process-mode-map ("w o" . 'delete-other-windows))
+  (:map magit-process-mode-map ("w l" . 'evil-window-delete))
+  (:map magit-process-mode-map ("w k" . 'evil-window-split))
+  (:map magit-process-mode-map ("w v" . 'evil-window-vsplit))
+
   ;; (:map magit-mode-map ("s" . nil))
   ;; (:map magit-mode-map ("t" . nil))
   )

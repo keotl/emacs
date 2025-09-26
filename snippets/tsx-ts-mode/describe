@@ -2,7 +2,7 @@
 # name: describe
 # key: describe
 # --
-import { cleanup, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import * as React from 'react';
 
 describe("`(replace-regexp-in-string ".test$" "" (file-name-base buffer-file-name))`", () => {
@@ -10,5 +10,4 @@ describe("`(replace-regexp-in-string ".test$" "" (file-name-base buffer-file-nam
     $0
   });
 
-  afterEach(cleanup)
 });
