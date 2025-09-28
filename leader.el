@@ -90,3 +90,5 @@
 
 ;; copy all keys in evil's "SPC" prefix to magit's "SPC"
 (define-key magit-mode-map (kbd "SPC") (lookup-key evil-normal-state-map (kbd "SPC")))
+(define-key magit-log-mode-map (kbd "SPC") (lookup-key evil-normal-state-map (kbd "SPC")))
+(define-key magit-process-mode-map (kbd "SPC") (lookup-key evil-normal-state-map (kbd "SPC")))
