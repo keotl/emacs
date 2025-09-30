@@ -83,6 +83,7 @@
 ;; Apps
 (define-key evil-normal-state-map (kbd "SPC a") '("Apps 📱" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC a t") 'vterm)
+(define-key evil-normal-state-map (kbd "SPC a d") 'dictionary-search)
 
 ;; Quit
 (define-key evil-normal-state-map (kbd "SPC q") '("Quit 🚪" . (keymap)))
