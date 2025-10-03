@@ -24,6 +24,7 @@
 (define-key evil-normal-state-map (kbd "SPC g") '("VCS/Tree 📐" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
 (define-key evil-normal-state-map (kbd "SPC g t") 'treemacs)
+(define-key evil-normal-state-map (kbd "SPC g a") 'vc-annotate)
 
 ;; Eglot
 (define-key evil-normal-state-map (kbd "SPC m") '("Language ✨" . (keymap)))
@@ -83,6 +84,10 @@
 ;; Apps
 (define-key evil-normal-state-map (kbd "SPC a") '("Apps 📱" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC a t") 'vterm)
+(define-key evil-normal-state-map (kbd "SPC a c") 'start-claude-vterm)
+(define-key evil-normal-state-map (kbd "SPC a C") 'start-claude-vterm-other-window)
+(define-key evil-normal-state-map (kbd "SPC a a") 'start-aider-vterm)
+(define-key evil-normal-state-map (kbd "SPC a A") 'start-aider-vterm-other-window)
 (define-key evil-normal-state-map (kbd "SPC a d") 'dictionary-search)
 
 ;; Quit

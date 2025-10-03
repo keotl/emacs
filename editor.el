@@ -35,7 +35,7 @@
   :ensure t
   :custom (evil-collection-setup-minibuffer t)
   :config
-  (evil-collection-init '(calendar dired ediff ivy xref))
+  (evil-collection-init '(calendar dired ediff ivy xref vc-annotate))
   (+layout-bepo-rotate-ts-bare-keymap '(read-expression-map))
   (+layout-bepo-rotate-bare-keymap '(evil-window-map) +layout-bepo-cr-rotation-style)
   (+layout-bepo-rotate-evil-keymap +layout-bepo-cr-rotation-style)

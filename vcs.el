@@ -69,3 +69,9 @@
   ;; (:map magit-mode-map ("t" . nil))
   )
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+;; VC Annotate mode bindings
+(with-eval-after-load 'vc-annotate
+  (with-eval-after-load 'evil
+    (evil-define-key 'normal vc-annotate-mode-map
+      (kbd "RET") 'magit-show-commit)))
