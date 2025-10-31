@@ -14,3 +14,10 @@
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
 
 (load  (concat (file-name-directory load-file-name) "../vendor/prettier-js.el"))
+
+;; Define SPC m f to invoke prettier-js in tsx-ts-mode (overrides global eglot-format binding)
+(defun tsx-ts-mode-keybindings ()
+  "Set up tsx-ts-mode specific keybindings."
+  (evil-local-set-key 'normal (kbd "SPC m f") 'prettier-js))
+
+(add-hook 'tsx-ts-mode-hook 'tsx-ts-mode-keybindings)

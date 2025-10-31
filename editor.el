@@ -151,6 +151,7 @@
 (load  (concat (file-name-directory load-file-name) "vendor/highlight-indentation.el"))
 (custom-set-variables '(highlight-indentation-overlay-string "|"))
 (add-to-list 'prog-mode-hook 'highlight-indentation-mode)
+(add-to-list 'prog-mode-hook 'display-line-numbers-mode)
 
 ;; move M-c to M-n to prevent swaywm keybinding conflict
 (define-key global-map (kbd "M-n") 'capitalize-word)

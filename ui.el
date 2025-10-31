@@ -1,6 +1,6 @@
 
-(global-display-line-numbers-mode)
-;; (setq display-line-numbers-type 'relative)
+;; (global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
 (setq-default show-trailing-whitespace t)
 
 ;; Modeline
@@ -14,6 +14,8 @@
 ;; Treemacs
 (use-package treemacs
   :ensure t
+  :config
+  (treemacs-resize-icons 16)
   ;; :bind (("M-m g t" . treemacs-select-window)
   ;; 	 ("M-m g T" . treemacs)
   ;; 	 )

@@ -52,6 +52,11 @@
 (define-key evil-normal-state-map (kbd "SPC t s") '("Text Size 🅰" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC t s t") 'text-scale-decrease)
 (define-key evil-normal-state-map (kbd "SPC t s s") 'text-scale-increase)
+(define-key evil-normal-state-map (kbd "SPC t d") 'eldoc-box-hover-at-point-mode)
+(define-key evil-normal-state-map (kbd "SPC t t") '("Theming 💅" . (keymap)))
+(define-key evil-normal-state-map (kbd "SPC t t t") 'toggle-transparency)
+(define-key evil-normal-state-map (kbd "SPC t t l") 'load-light-theme)
+(define-key evil-normal-state-map (kbd "SPC t t d") 'load-dark-theme)
 
 ;; Text/Spelling
 (define-key evil-normal-state-map (kbd "SPC s") '("Text/Spelling 📚" . (keymap)))

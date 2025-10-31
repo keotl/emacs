@@ -26,6 +26,8 @@
             (lambda () (setq-local show-trailing-whitespace nil)))
   )
 
+(load  (concat (file-name-directory load-file-name) "./vendor/vterm-anti-flicker-filter.el"))
+
 ;; (use-package aidermacs
 ;;   :ensure t
 ;;   :bind(("C-c a" . aidermacs-transient-menu))
@@ -47,17 +49,21 @@
 
 (defun start-vterm-wrapper-app (executable)
   "Start a new vterm instance, run EXECUTABLE command, and rename buffer to *EXECUTABLE*.
-If *EXECUTABLE* buffer already exists, switch to it instead."
+If *EXECUTABLE* buffer already exists, switch to it instead.
+Starts in the project root directory if available."
   (let* ((buffer-name (format "*%s*" executable))
-         (existing-buffer (get-buffer buffer-name)))
+         (existing-buffer (get-buffer buffer-name))
+         (project (project-current))
+         (project-root (when project (project-root project))))
     (if existing-buffer
         (switch-to-buffer existing-buffer)
-      (let ((vterm-buffer (vterm t))) ; Create new vterm instance
-        (with-current-buffer vterm-buffer
-          (vterm-send-string executable)
-          (vterm-send-return)
-          (rename-buffer buffer-name t)
-          (vterm-app-mode 1))))))
+      (let ((default-directory (or project-root default-directory)))
+        (let ((vterm-buffer (vterm t))) ; Create new vterm instance
+          (with-current-buffer vterm-buffer
+            (vterm-send-string executable)
+            (vterm-send-return)
+            (rename-buffer buffer-name t)
+            (vterm-app-mode 1)))))))
 
 (defun start-claude-vterm ()
   "Start a new vterm instance with claude."

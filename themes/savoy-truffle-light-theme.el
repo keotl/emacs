@@ -1,4 +1,4 @@
-;;; savoy-truffle-theme.el --- Theme 
+;;; savoy-truffle-light-theme.el --- Light Theme Variant
 
 ;; Copyright (C) 2020 , Kento Lauzon
 
@@ -27,40 +27,40 @@
 
 ;;; Code:
 
- (deftheme savoy-truffle)
+ (deftheme savoy-truffle-light)
 (let ((class '((class color) (min-colors 89)))
-      (fg0 "#5D6B7A")
-       (fg1 "#A9B7C6")
-       (fg2 "#9ba8b6")
-       (fg3 "#073447")
-       (region "#073447")
-       (fg4 "#808b96")
-       (bg1 "#040D26")
-       (bg2 "#06143b")
-       (bg3 "#071847")
-       (bg4 "#0a2161")
-       (bg5 "#3D5494")
-       (builtin "#F84ED0")
-       (keyword "#FFD212")
-       (yellow "#FFD212")
-       (const   "#10A5E1")
-       (blue   "#10A5E1")
-       (comment "#808080")
-       (func    "#6DD8D1")
-       (cyan    "#6DD8D1")
-       (str     "#17DE4C")
-       (green     "#17DE4C")
-       (type    "#10A5E1")
-       (var     "#F84ED0")
-       (magenta     "#F84ED0")
-       (localvar     "#F49810")
-       (orange     "#F49810")
+      (fg0 "#98A6B5")
+      (fg1 "#3A4855")
+       (fg2 "#4a5865")
+       (fg3 "#BDD4E5")
+       (region "#BDD4E5")
+       (fg4 "#5a6875")
+       (bg1 "#F5F8FA")
+       (bg2 "#E8EDF2")
+       (bg3 "#DBE3EB")
+       (bg4 "#C5D4E0")
+       (bg5 "#8FA4B8")
+       (builtin "#A01585")
+       (keyword "#B8A000")
+       (yellow "#B8A000")
+       (const   "#0884BA")
+       (blue   "#0884BA")
+       (comment "#888888")
+       (func    "#1DB0AA")
+       (cyan    "#1DB0AA")
+       (str     "#0C9A2D")
+       (green     "#0C9A2D")
+       (type    "#0884BA")
+       (var     "#A01585")
+       (magenta     "#A01585")
+       (localvar     "#B85E00")
+       (orange     "#B85E00")
        (warning "#BC3F3C")
-       (warning2 "#F49810")
-       (warning3 "#17DE4C")
+       (warning2 "#B85E00")
+       (warning3 "#0FB838")
        )
    (custom-theme-set-faces
-   'savoy-truffle
+   'savoy-truffle-light
         `(default ((,class (:background ,bg1 :foreground ,fg1))))
         `(error ((,class (:foreground ,warning))))
         ;;`(font-lock-builtin-face ((,class (:foreground ,builtin))))
@@ -82,7 +82,7 @@
         `(highlight ((,class (:foreground ,fg1 :background ,bg3 :weight ,'bold))))
 	`(hl-line ((,class (:background  ,bg2))))
 	`(fringe ((,class (:background ,bg1 :foreground ,fg4))))
-	`(cursor ((,class (:background ,fg1))))
+	`(cursor ((,class (:background ,fg2))))
         `(show-paren-match ((,class (:foreground ,localvar :weight ,'bold))))
         `(isearch ((,class (:bold t :foreground ,warning :background ,bg3))))
         `(mode-line ((,class (:box (:line-width 1 :color ,region) :bold t :foreground ,fg4 :background ,bg2))))
@@ -159,7 +159,7 @@
         `(js3-function-param-face ((,class (:foreground ,fg2))))
         `(js3-jsdoc-tag-face ((,class (:foreground ,keyword))))
         `(js3-instance-member-face ((,class (:foreground ,const))))
-	`(warning ((,class (:foreground ,warning)))) 
+	`(warning ((,class (:foreground ,warning))))
 	`(ac-completion-face ((,class (:underline t :foreground ,keyword))))
 	`(info-quoted-name ((,class (:foreground ,builtin))))
 	`(info-string ((,class (:foreground ,str))))
@@ -270,7 +270,7 @@
 	`(lsp-headerline-breadcrumb-project-prefix-face ((,class (:foreground ,fg0 :weight ,'normal))))
 	`(lsp-headerline-breadcrumb-prefix-face ((,class (:foreground ,fg0 :weight ,'normal))))
 	`(lsp-headerline-breadcrumb-symbols-face ((,class (:foreground ,fg0 :weight ,'normal))))
-	
+
 	;; `(lsp-face-highlight-read ((,class (:background ,bg3 :weight ,'bold :underline t))))
 
 	`(flymake-note ((,class (:underline (:color ,green)))))
@@ -308,7 +308,7 @@
 	`(typescript-ts-jsx-attribute-face  ((,class (:foreground ,fg1))))
 	`(font-lock-property-use-face  ((,class (:foreground ,fg1))))
 	`(font-lock-operator-face ((,class (:foreground ,orange))))
-	
+
 	;; font-lock generic
 	`(font-lock-function-call-face  ((,class (:foreground ,fg1))))
 	`(font-lock-builtin-face  ((,class (:foreground ,fg1))))
@@ -316,7 +316,7 @@
 
         ;; treemacs
 	`(treemacs-window-background-face  ((,class (:height 110))))
-        
+
         ;; eldoc-box
 	`(eldoc-box-body  ((,class (:family ,"Arial" :background ,bg4))))
 	`(eldoc-box-border  ((,class (:background ,fg2))))
@@ -327,10 +327,10 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'savoy-truffle)
+(provide-theme 'savoy-truffle-light)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; savoy-truffle-theme.el ends here
+;;; savoy-truffle-light-theme.el ends here
