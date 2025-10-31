@@ -5,7 +5,10 @@
   :config
   (electric-pair-mode 1)
   (company-mode 1)
+  (setq eldoc-echo-area-use-multiline-p nil)
   )
+
+(load  (concat (file-name-directory load-file-name) "eldoc-box.el"))
 
 (use-package autoinsert
   :init
