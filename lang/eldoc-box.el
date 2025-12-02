@@ -3,7 +3,7 @@
   :init
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t)
   (add-hook 'eldoc-box-buffer-setup-hook #'eldoc-box-prettify-ts-errors 0 t)
-  ;; (setq eldoc-box-only-multi-line t) ;; to keep single-line in minibuffer
+  (setq eldoc-box-only-multi-line t) ;; to keep single-line in minibuffer
   )
 
 (defun keotl/eldoc-box-set-offset(child-width child-height)
