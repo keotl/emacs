@@ -2,6 +2,7 @@
 (define-key evil-normal-state-map (kbd "SPC f") '("Files 🔍" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC f f") 'find-file)
 (define-key magit-mode-map (kbd "SPC f f") 'find-file)
+(define-key magit-mode-map (kbd "SPC f r") 'recentf)
 
 ;; Project
 (define-key evil-normal-state-map (kbd "SPC p f") 'project-find-file)

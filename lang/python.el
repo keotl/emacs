@@ -7,3 +7,8 @@
   )
 
 (add-hook 'python-mode-hook 'eglot-ensure)
+
+(defun python-mode-keybindings ()
+  (evil-local-set-key 'normal (kbd "SPC m f") 'py-yapf-buffer))
+
+(add-hook 'python-mode-hook 'python-mode-keybindings)
