@@ -31,4 +31,5 @@
 (load  (concat (file-name-directory load-file-name) "terraform.el"))
 (load  (concat (file-name-directory load-file-name) "csharp.el"))
 (load  (concat (file-name-directory load-file-name) "rust.el"))
+(load  (concat (file-name-directory load-file-name) "clang.el"))
 ;; (load  (concat (file-name-directory load-file-name) "haskell.el"))
