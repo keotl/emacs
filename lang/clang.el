@@ -13,5 +13,11 @@
     "#endif // " str \n
     ))
 
+(define-auto-insert '("\\.c\\'" . "C source skeleton")
+  '(
+    (concat (file-name-base (buffer-file-name)) ".h")
+    "#include \"" str "\"" \n
+    ))
+
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c-mode-hook 'auto-insert-mode)
