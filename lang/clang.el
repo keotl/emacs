@@ -21,3 +21,6 @@
 
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c-mode-hook 'auto-insert-mode)
+
+(evil-define-key 'normal c-mode-map (kbd "SPC m g o") 'ff-find-other-file)
+(evil-define-key 'normal c-mode-map (kbd "SPC m g O") 'ff-find-other-file-other-window)
