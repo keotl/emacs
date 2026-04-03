@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: todo
+# key: todo
+# --
+// TODO - $0  - keotl `(shell-command-to-string "sh -c 'echo -n $(date +%Y-%m-%d)'")`
