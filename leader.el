@@ -86,6 +86,8 @@
 (define-key evil-normal-state-map (kbd "SPC h m") 'describe-mode)
 (define-key evil-normal-state-map (kbd "SPC h k") 'describe-key)
 (define-key evil-normal-state-map (kbd "SPC h K") 'describe-keymap)
+(define-key evil-normal-state-map (kbd "SPC h .") 'eldoc-doc-buffer)
+
 
 ;; Apps
 (define-key evil-normal-state-map (kbd "SPC a") '("Apps 📱" . (keymap)))
