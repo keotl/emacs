@@ -1,6 +1,6 @@
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
-               '(scala-ts-mode . ("~/.emacs.d/.cache/lsp/metals/metals")))
+               '(scala-ts-mode . ("metals")))
 ;; TODO change language-server path
   )
 
