@@ -1,6 +1,7 @@
 ;; Files
 (define-key evil-normal-state-map (kbd "SPC f") '("Files 🔍" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC f f") 'find-file)
+(define-key evil-normal-state-map (kbd "SPC f h") 'hexl-find-file)
 (define-key magit-mode-map (kbd "SPC f f") 'find-file)
 (define-key magit-mode-map (kbd "SPC f r") 'recentf)
 
@@ -101,6 +102,7 @@
 ;; Quit
 (define-key evil-normal-state-map (kbd "SPC q") '("Quit 🚪" . (keymap)))
 (define-key evil-normal-state-map (kbd "SPC q q") 'save-buffers-kill-terminal)
+(define-key evil-normal-state-map (kbd "SPC q c") 'reload-config)
 
 ;; copy all keys in evil's "SPC" prefix to magit's "SPC"
 (define-key magit-mode-map (kbd "SPC") (lookup-key evil-normal-state-map (kbd "SPC")))
