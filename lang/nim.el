@@ -8,4 +8,6 @@
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
                '(nim-mode . ("nimlangserver" "--stdio")))
+(add-to-list 'eglot-server-programs
+               '(nimscript-mode . ("nimlangserver" "--stdio")))
   )
