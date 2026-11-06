@@ -1,3 +1,5 @@
+;;; apps.el --- -*- lexical-binding: t; -*-
+
 (use-package vterm
   :ensure t
   :bind (:map vterm-mode-map
@@ -16,7 +18,10 @@
       (kbd "C-p") 'vterm--self-insert
       (kbd "C-n") 'vterm--self-insert
       (kbd "C-d") 'vterm--self-insert
-      ))
+      )
+    (add-hook 'evil-normal-state-entry-hook #'my/vterm-normal-state-copy-mode)
+    (add-hook 'evil-insert-state-entry-hook #'my/vterm-insert-state-exit-copy-mode)
+    (add-hook 'vterm-copy-mode-hook #'my/vterm-copy-mode-exit-to-insert))
   (when (eq system-type 'darwin)
     (setq vterm-shell "fish")
     )
@@ -25,6 +30,21 @@
   (add-hook 'vterm-mode-hook
             (lambda () (setq-local show-trailing-whitespace nil)))
   )
+
+;; Normal state freezes vterm output (copy mode) so scrolling isn't yanked
+;; back to the cursor; insert state resumes it.
+(defun my/vterm-normal-state-copy-mode ()
+  (when (and (derived-mode-p 'vterm-mode) (not vterm-copy-mode))
+    (vterm-copy-mode 1)))
+
+(defun my/vterm-insert-state-exit-copy-mode ()
+  (when (and (derived-mode-p 'vterm-mode) vterm-copy-mode)
+    (vterm-copy-mode -1)))
+
+(defun my/vterm-copy-mode-exit-to-insert ()
+  (when (and (not vterm-copy-mode) (bound-and-true-p evil-local-mode)
+             (not (evil-insert-state-p)))
+    (evil-insert-state)))
 
 (load  (concat (file-name-directory load-file-name) "./vendor/vterm-anti-flicker-filter.el"))
 
@@ -75,6 +95,26 @@ Starts in the project root directory if available."
   (interactive)
   (start-vterm-wrapper-app "aider"))
 
+(defun start-codex-vterm ()
+  "Start a new vterm instance with codex."
+  (interactive)
+  (start-vterm-wrapper-app "codex"))
+
+(defun start-opencode-vterm ()
+  "Start a new vterm instance with opencode."
+  (interactive)
+  (start-vterm-wrapper-app "opencode"))
+
+(defun start-pi-vterm ()
+  "Start a new vterm instance with pi."
+  (interactive)
+  (start-vterm-wrapper-app "pi"))
+
+(defun start-vterm-default ()
+  "Start a new vterm instance with default profile."
+  (interactive)
+  (start-vterm-wrapper-app "fish"))
+
 (defun start-claude-vterm-other-window ()
   "Start a new vterm instance with claude in another window."
   (interactive)
@@ -90,3 +130,33 @@ Starts in the project root directory if available."
       (split-window-right))
   (other-window 1)
   (start-aider-vterm))
+
+(defun start-codex-vterm-other-window ()
+  "Start a new vterm instance with codex in another window."
+  (interactive)
+  (if (one-window-p)
+      (split-window-right))
+  (other-window 1)
+  (start-codex-vterm))
+
+(defun start-opencode-vterm-other-window ()
+  "Start a new vterm instance with opencode in another window."
+  (interactive)
+  (if (one-window-p)
+      (split-window-right))
+  (other-window 1)
+  (start-opencode-vterm))
+
+(defun start-pi-vterm-other-window ()
+  "Start a new vterm instance with pi in another window."
+  (interactive)
+  (if (one-window-p)
+      (split-window-right))
+  (other-window 1)
+  (start-pi-vterm))
+
+(use-package agent-shell
+      :ensure t
+      :config
+      ;; (add-to-list 'exec-path "~/.opencode/bin/")
+      )

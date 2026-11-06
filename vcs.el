@@ -1,3 +1,5 @@
+;;; vcs.el --- -*- lexical-binding: t; -*-
+
 (use-package magit
   :ensure t
   :config
@@ -29,6 +31,7 @@
   (setq magit-diff-visit-prefer-worktree t)
   :bind
   ;; magit-mode
+  ;; (:map magit-mode-map ("<escape>" . ignore))
   (:map magit-mode-map ("<SPC>" . nil))
   (:map magit-mode-map ("w" . nil))
   (:map magit-mode-map ("w w" . 'evil-window-next))
@@ -69,6 +72,15 @@
   ;; (:map magit-mode-map ("t" . nil))
   )
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+(defun +magit-status-if-git-root-no-args ()
+  (when (and (not (seq-some #'buffer-file-name (buffer-list)))
+             (fboundp 'magit-toplevel)
+             (let ((top (magit-toplevel)))
+               (and top (file-equal-p default-directory top))))
+    (magit-status)))
+
+(add-hook 'emacs-startup-hook #'+magit-status-if-git-root-no-args)
 
 ;; VC Annotate mode bindings
 (with-eval-after-load 'vc-annotate
