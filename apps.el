@@ -155,8 +155,8 @@ Starts in the project root directory if available."
   (other-window 1)
   (start-pi-vterm))
 
-(use-package agent-shell
-      :ensure t
-      :config
-      ;; (add-to-list 'exec-path "~/.opencode/bin/")
-      )
+;; (use-package agent-shell
+;;       :ensure t
+;;       :config
+;;       ;; (add-to-list 'exec-path "~/.opencode/bin/")
+;;       )
